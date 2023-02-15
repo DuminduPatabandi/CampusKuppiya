@@ -20,7 +20,7 @@ const Navbar = () => {
           {navLinks.map((nav, index) => (
             <li
               key={nav.id}
-              className = {`font-montserrat text-[#838383] hover:text-[#ed2939]  duration-700 cursor-pointer font-medium text-[.85rem] mx-6 `}>
+              className = {`font-montserrat text-[#838383] hover:text-[#ed2939]  duration-700 cursor-pointer font-medium text-[.85rem] py-1 mx-6 `}>
               <NavLink to ={`${nav.path}`}>
                 {nav.title}
               </NavLink>
@@ -35,7 +35,9 @@ const Navbar = () => {
           {navLinks.map((nav, index) => (
             <li
               key={nav.id}
-              className = {`font-montserrat text-[#838383] cursor-pointer font-bold text-[1.5rem] my-6`}>
+              src={toggle ? closing : mymenu}
+              onClick={() => settoggle((prev) => !prev)}
+              className = {` ${toggle ? 'flex' : 'hidden'} font-montserrat duration-700 text-[#838383] cursor-pointer font-bold text-[1.5rem] my-6`}>
               <NavLink to ={`${nav.path}`}>
                 {nav.title}
               </NavLink>

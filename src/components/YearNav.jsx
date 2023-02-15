@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
 
     
-    <div className="root-layout">
+    <div className="year_layout">
 
 
       <nav className='w-full bg-white py-[1rem] navbar'>
@@ -20,7 +20,7 @@ const Navbar = () => {
           {YearLinks.map((nav, index) => (
             <li
               key={nav.id}
-              className = {`font-montserrat text-[#838383] hover:text-[#ed2939]  duration-700 cursor-pointer font-medium text-[.85rem] mx-6 `}>
+              className = {`font-montserrat text-[#838383] hover:text-[#23221f] font-bold duration-700 cursor-pointer my-5 md:my-1 text-[.85rem] mx-6 `}>
               <NavLink to ={`${nav.path}`}>
                 {nav.title}
               </NavLink>
