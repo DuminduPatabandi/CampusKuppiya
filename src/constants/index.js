@@ -1,14 +1,27 @@
 import { people01, people02, people03, facebook, github, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star, bbRv, logoscssa, websitedesign, girlWhite, statbook, mia } from "../assets";
 
-export const PageLinks = [
+export const YearLinks = [
   {
-    id: "details",
-    title: "DETAILS",
+    id: "year1",
+    title: "YEAR 1",
+    path: "year1"
   },
   {
-    id: "newsletter",
-    title: "NEWSLETTER",
+    id: "year2",
+    title: "YEAR 2",
+    path: "year2"
   },
+  {
+    id: "year3",
+    title: "YEAR 3",
+    path: "year3"
+  },
+  {
+    id: "year4",
+    title: "YEAR 4",
+    path: "year4"
+  },
+
 ];
 
 export const navLinks = [
@@ -23,19 +36,14 @@ export const navLinks = [
     path: "about"
   },
   {
-    id: "work",
-    title: "WORK",
-    path: "work"
+    id: "kuppiya",
+    title: "KUPPIYA",
+    path: "kuppiya"
   },
   {
     id: "videos",
     title: "VIDEOS",
     path: "videos"
-  },
-  {
-    id: "gallery",
-    title: "GALLERY",
-    path: "gallery"
   },
   {
     id: "contact",
