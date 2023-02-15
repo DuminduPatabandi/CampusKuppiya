@@ -34,11 +34,13 @@ import mia from "./mia.svg";
 import team from "./team.jpeg";
 import github from "./github.svg";
 import drunkenwizard_dark from "./drunkenwizard_dark.svg";
+import kuppi from "./kuppi.svg";
 
 export {
   airbnb,
   logoscssa,
   bbRv,
+  kuppi,
   github,
   drunkenwizard_dark,
   team,

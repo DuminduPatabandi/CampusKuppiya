@@ -10,7 +10,9 @@ const Kuppiya = () => {
         </div>
       </div>
 
-        <YearNav />
+        <div className="text-center">
+            <YearNav />
+        </div>
     </div>
 
   )
