@@ -20,22 +20,6 @@ const router = createBrowserRouter(
   )
 )
 
-const router2 = createBrowserRouter(
-  createRoutesFromElements(
-    <Route path='/' element={<Footer /> }>
-      <Route index element={ <Home/> }/>
-      <Route path='about' element={ <About/> }/>
-      <Route path='kuppiya' element={ <Kuppiya/> }>    
-        <Route path='year1' element={ <Year1/> } />
-        <Route path='year2' element={ <Year2/> } />
-        <Route path='year3' element={ <Year3/> } />
-        <Route path='year4' element={ <Year4/> } />
-      </Route>
-      <Route path='videos' element={ <Video/> }/>
-      <Route path='contact' element={ <Contact/> }/>
-  </Route>
-  )
-)
 
 const App = () => {
   return (
@@ -43,14 +27,7 @@ const App = () => {
 
       <div className=' overflow-hidden bg-white w-full'>
         <RouterProvider router={router} />
-
-
-        {/* <div className= {` ${styles.paddingX} ${styles.flexStart} bg-[#F9F9F9] w-full`}>
-          <div className={`${styles.boxWidth}`}> */}
-          <RouterProvider router={router2} />
-          {/* </div>
-        </div> */}
-
+        <Footer />
       </div>
 
     
