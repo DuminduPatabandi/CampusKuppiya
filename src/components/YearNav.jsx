@@ -1,7 +1,7 @@
 import {useState} from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
 import {closing, mymenu} from '../assets'
-import { navLinks } from '../constants'
+import { YearLinks } from '../constants'
 
 
 
@@ -17,7 +17,7 @@ const Navbar = () => {
       <nav className='w-full bg-white py-[1rem] navbar'>
       
         <ul className='list-none sm:flex hidden justify-center items-center'>
-          {navLinks.map((nav, index) => (
+          {YearLinks.map((nav, index) => (
             <li
               key={nav.id}
               className = {`font-montserrat text-[#838383] hover:text-[#ed2939]  duration-700 cursor-pointer font-medium text-[.85rem] mx-6 `}>
@@ -32,7 +32,7 @@ const Navbar = () => {
           onClick={() => settoggle((prev) => !prev)} />
           <div className={`${toggle ? 'flex' : 'hidden'} p-6 bg-white absolute justify-center top-10 right-0 my-2 w-full h-screen sidebar `}>
           <ul className='list-none flex flex-col  justify-center items-center '>
-          {navLinks.map((nav, index) => (
+          {YearLinks.map((nav, index) => (
             <li
               key={nav.id}
               className = {`font-montserrat text-[#838383] cursor-pointer font-bold text-[1.5rem] my-6`}>

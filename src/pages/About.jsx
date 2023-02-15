@@ -1,4 +1,4 @@
-const Home = () => {
+const About = () => {
     return (
       <div className="about bg-black">
           <h1>Hello About</h1>
@@ -9,4 +9,4 @@ const Home = () => {
     )
   }
   
-  export default Home
+  export default About

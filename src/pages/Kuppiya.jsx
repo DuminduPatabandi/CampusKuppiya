@@ -1,7 +1,7 @@
-import {LogoArea} from '../components'
+import {LogoArea, YearNav} from '../components'
 import styles from '../style'
 
-const Home = () => {
+const Kuppiya = () => {
   return (
     <div className="home bg-slate-500">
       <div className= {` ${styles.paddingX} ${styles.flexStart} bg-[#F9F9F9] py-3 w-full`}>
@@ -10,10 +10,10 @@ const Home = () => {
         </div>
       </div>
 
-
+        <YearNav />
     </div>
 
   )
 }
 
-export default Home
+export default Kuppiya
