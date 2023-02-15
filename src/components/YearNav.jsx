@@ -16,7 +16,7 @@ const Navbar = () => {
 
       <nav className='w-full bg-white py-[1rem] navbar'>
       
-        <ul className='list-none sm:flex hidden justify-center items-center'>
+        <ul className='list-none sm:flex sm:text-center justify-center items-center'>
           {YearLinks.map((nav, index) => (
             <li
               key={nav.id}
@@ -27,7 +27,7 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        <div className='sm:hidden flex flex-1 justify-end items-center px-4 '>
+        {/* <div className='sm:hidden flex flex-1 justify-end items-center px-4 '>
           <img src={toggle ? closing : mymenu} alt="menu-icon" className='w-[28px] h-[28px] object-contain'
           onClick={() => settoggle((prev) => !prev)} />
           <div className={`${toggle ? 'flex' : 'hidden'} p-6 bg-white absolute justify-center top-10 right-0 my-2 w-full h-screen sidebar `}>
@@ -43,7 +43,7 @@ const Navbar = () => {
           ))}
         </ul>
           </div>
-        </div>
+        </div> */}
 
       </nav>
 
