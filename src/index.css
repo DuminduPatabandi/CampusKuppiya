@@ -138,3 +138,7 @@
   background: rgba(255, 255, 255, 0.6);
   filter: blur(750px);
 }
+
+nav ul li a.active {
+  color: #ed2939;
+}

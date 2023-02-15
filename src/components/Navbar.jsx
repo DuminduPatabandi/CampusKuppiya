@@ -1,7 +1,8 @@
 import {useState} from 'react'
+import { NavLink } from 'react-router-dom'
 import {closing, mymenu} from '../assets'
 import { navLinks } from '../constants'
-import { PageLinks } from '../constants'
+
 
 
 const Navbar = () => {
@@ -17,11 +18,11 @@ const Navbar = () => {
         {navLinks.map((nav, index) => (
           <li 
             key={nav.id}
-            className = {`font-montserrat text-[#838383] hover:text-[#ed2939] duration-700 cursor-pointer text-[.7rem] mx-6`}>
+            className = {`font-montserrat text-[#838383] hover:text-[#ed2939]  duration-700 cursor-pointer text-[.7rem] mx-6 `}>
 
-            <a href ={`${nav.path}`}>
-              {nav.title }
-            </a>
+            <NavLink to ={`${nav.path}`}>
+              {nav.title}
+            </NavLink>
 
           </li>
         ))}
@@ -41,9 +42,9 @@ const Navbar = () => {
             key={nav.id}
             className = {`font-montserrat text-[#838383] cursor-pointer font-bold text-[1.5rem] my-6`}>
 
-            <a href ={`${nav.path}`}>
+            <NavLink to ={`${nav.path}`}>
               {nav.title}
-            </a>
+            </NavLink>
 
           </li>
         ))}
