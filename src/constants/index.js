@@ -20,27 +20,27 @@ export const navLinks = [
   {
     id: "about",
     title: "ABOUT",
-    path: "#about"
+    path: "about"
   },
   {
     id: "work",
     title: "WORK",
-    path: "#work"
+    path: "work"
   },
   {
     id: "videos",
     title: "VIDEOS",
-    path: "/videos"
+    path: "videos"
   },
   {
     id: "gallery",
     title: "GALLERY",
-    path: "/gallery"
+    path: "gallery"
   },
   {
     id: "contact",
     title: "CONTACT",
-    path: "/contact"
+    path: "contact"
   },
 ];
 
