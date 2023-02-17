@@ -247,7 +247,14 @@ export const stats = [
 
 export const footerLinks = [
 
-
+  {
+    name: "drunkenwizards official",
+    link: "https://drunkenwizard.netlify.app/",
+  },
+  {
+    name: "dumindupatabandi official",
+    link: "https://dumindupatabandi.netlify.app/",
+  },
   {
     name: "apebodima.com",
     link: "https://apebodima.com/",

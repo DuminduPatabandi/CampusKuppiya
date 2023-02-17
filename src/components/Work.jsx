@@ -15,7 +15,6 @@ export default function Example() {
                   {product.name}
                   </p>
                 </div>
-                {/* <h3 className="mt-4  font-shadows text-center font-bold text-[#939393] text-[1rem] text-gray-700">{product.mywork}</h3> */}
               </a>
             ))}
           </div>
