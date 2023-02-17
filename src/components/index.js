@@ -6,6 +6,7 @@ import Year3 from "./Year3";
 import Year4 from "./Year4";
 import YearNav from "./YearNav";
 import Footer from "./Footer";
+import Work from "./Work";
 
 
 export {
@@ -17,4 +18,5 @@ export {
     Year4,
     YearNav,
     Footer,
+    Work,
 };

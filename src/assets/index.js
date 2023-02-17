@@ -35,12 +35,14 @@ import team from "./team.jpeg";
 import github from "./github.svg";
 import drunkenwizard_dark from "./drunkenwizard_dark.svg";
 import kuppi from "./kuppi.svg";
+import note from "./note.pdf";
 
 export {
   airbnb,
   logoscssa,
   bbRv,
   kuppi,
+  note,
   github,
   drunkenwizard_dark,
   team,

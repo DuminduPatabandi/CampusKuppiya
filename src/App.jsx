@@ -25,7 +25,7 @@ const App = () => {
   return (
     // Navigation bar
 
-      <div className=' overflow-hidden bg-white w-full'>
+      <div className=' overflow-hidden bg-[#002ead] w-full'>
         <RouterProvider router={router} />
         <Footer />
       </div>
