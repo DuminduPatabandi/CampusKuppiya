@@ -5,7 +5,7 @@ export default function Example() {
   return (
     <section id='work'>
       <div className="">
-        <div className="mx-auto max-w-2xl py-12 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+        <div className="mx-auto max-w-2xl py-12 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8 ">
           <h2 className={`${styles.paddingNew} font-merry text-[#002ead] text-[1.6rem] font-bold text-center`}>Areas focused</h2>
           <div className="grid grid-cols-1 text-center gap-y-10  gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
             {doings.map((product) => (
