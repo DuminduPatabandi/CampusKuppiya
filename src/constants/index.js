@@ -1,4 +1,4 @@
-import { people01, people02, people03, facebook, github, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star, bbRv, logoscssa, websitedesign, girlWhite, statbook, mia } from "../assets";
+import { people01, people02, people03, facebook, fb, github, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star, } from "../assets";
 
 export const YearLinks = [
   {
@@ -83,7 +83,7 @@ export const products = [
     mywork:'3D Modeling',
     href: '#',
     price: '$48',
-    imageSrc: bbRv,
+    imageSrc: 'bbRv',
     imageAlt: '3D model of Breaking Bad RV.',
   },
   {
@@ -92,7 +92,7 @@ export const products = [
     mywork:'Logo Designing',
     href: '#',
     price: '$35',
-    imageSrc: logoscssa,
+    imageSrc: 'logoscssa',
     imageAlt: 'Logo Design of SCSSA, Universityof Kelaniya.',
   },
   {
@@ -101,7 +101,7 @@ export const products = [
     mywork:'Web Designing',
     href: '#',
     price: '$89',
-    imageSrc: websitedesign,
+    imageSrc: 'websitedesign',
     imageAlt: 'Front-End design of Drunkenwizards website.',
   },
   {
@@ -110,7 +110,7 @@ export const products = [
     mywork:'Magazines',
     href: '#',
     price: '$35',
-    imageSrc: statbook,
+    imageSrc: 'statbook',
     imageAlt: 'Statistical Book design for SCSSA, University of Kelaniyaks.',
   },
   {
@@ -119,7 +119,7 @@ export const products = [
     mywork:'Flat Illustrations',
     href: '#',
     price: '$35',
-    imageSrc: girlWhite,
+    imageSrc: 'girlWhite',
     imageAlt: 'Flat illustration of a girl.',
   },
   {
@@ -128,7 +128,7 @@ export const products = [
     mywork:'Colorful Portraits',
     href: '#',
     price: '$35',
-    imageSrc: mia,
+    imageSrc: 'mia',
     imageAlt: 'Portrait of Mia Khalifa.',
   },
 
