@@ -27,6 +27,8 @@ import people03 from "./people03.png";
 import github from "./github.svg";
 import drunkenwizard_dark from "./drunkenwizard_dark.svg";
 import kuppi from "./kuppi.svg";
+import kuppilogo from "./kuppilogo.svg";
+import mainlogo from "./mainlogo.svg";
 
 export {
   airbnb,
@@ -34,6 +36,8 @@ export {
   fb,
   github,
   drunkenwizard_dark,
+  kuppilogo,
+  mainlogo,
   mymenu,
   closing,
   bill,
