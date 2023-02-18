@@ -1,5 +1,5 @@
 import { NavLink, Outlet } from 'react-router-dom'
-import { YearLinks } from '../constants'
+import { Y2Semesters} from '../constants'
 
 
 
@@ -11,13 +11,13 @@ const Navbar = () => {
     <div className="year_layout">
 
 
-      <nav className='w-full bg-white py-[1rem] navbar'>
+      <nav className='w-full bg-[#0a0a23] py-[1rem] navbar'>
       
         <ul className='list-none sm:flex sm:text-center justify-center items-center'>
-          {YearLinks.map((nav, index) => (
+          {Y2Semesters.map((nav) => (
             <li
               key={nav.id}
-              className = {`font-montserrat text-[#838383] hover:text-[#23221f] font-bold duration-700 cursor-pointer my-5 md:my-1 text-[.85rem] mx-6 `}>
+              className = {`font-montserrat text-[#838383] hover:text-[#ffffff] font-bold duration-700 cursor-pointer my-5 md:my-1 text-[.85rem] mx-6 `}>
               <NavLink to ={`${nav.path}`}>
                 {nav.title}
               </NavLink>

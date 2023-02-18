@@ -1,8 +1,10 @@
-import React from 'react'
+import { SemNav4 } from "../components"
 
 const Year4 = () => {
   return (
-    <div>Year4</div>
+    <div className="text-center">
+      <SemNav4/>
+    </div>
   )
 }
 

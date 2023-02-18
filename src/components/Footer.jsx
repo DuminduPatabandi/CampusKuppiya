@@ -70,10 +70,10 @@ const FooterLarge = () => (
             {socialMedia.map((nav, index) => (
 
               <li className=''>
-                  <a key={nav.id} href={nav.href}>
+                  <a href={nav.href} target="_blank" className = {` cursor-pointer`}>
                   <img
                     src={nav.icon}
-                    className = {` cursor-pointer hover:text-[#ed2939] duration-700  pb-5 `}
+                    className="pb-5"
                   />
                   </a>
 
