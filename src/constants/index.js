@@ -23,6 +23,54 @@ export const YearLinks = [
   },
 
 ];
+export const Y1Semesters = [
+  {
+    id: "y1s1",
+    title: "SEMESTER 1",
+    path: "y1s1"
+  },
+  {
+    id: "y1s2",
+    title: "SEMESTER 2",
+    path: "y1s2"
+  },
+];
+export const Y2Semesters = [
+  {
+    id: "y2s1",
+    title: "SEMESTER 1",
+    path: "y2s1"
+  },
+  {
+    id: "y2s2",
+    title: "SEMESTER 2",
+    path: "y2s2"
+  },
+];
+export const Y3Semesters = [
+  {
+    id: "y3s1",
+    title: "SEMESTER 1",
+    path: "y3s1"
+  },
+  {
+    id: "y3s2",
+    title: "SEMESTER 2",
+    path: "y3s2"
+  },
+];
+export const Y4Semesters = [
+  {
+    id: "y4s1",
+    title: "SEMESTER 1",
+    path: "y4s1"
+  },
+  {
+    id: "y4s2",
+    title: "SEMESTER 2",
+    path: "y4s2"
+  },
+];
 
 export const navLinks = [
   {
@@ -266,7 +314,7 @@ export const footerLinks = [
 export const socialMedia = [
   
   {
-    id: "fb",
+    id: "facebook",
     icon: facebook,
     href: "https://www.facebook.com/dumindu.patabandi.7",
   },
