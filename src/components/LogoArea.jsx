@@ -1,5 +1,5 @@
 import styles from '../style'
-import { kuppi , note} from '../assets'
+import { kuppi} from '../assets'
 
 const LogoArea = () => {
   return (
