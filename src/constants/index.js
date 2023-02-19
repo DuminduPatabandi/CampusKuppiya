@@ -100,30 +100,6 @@ export const navLinks = [
   },
 ];
 
-export const features = [
-  {
-    id: "feature-1",
-    icon: star,
-    title: "Rewards",
-    content:
-      "The best credit cards offer some tantalizing combinations of promotions and prizes",
-  },
-  {
-    id: "feature-2",
-    icon: shield,
-    title: "100% Secured",
-    content:
-      "We take proactive steps make sure your information and transactions are secure.",
-  },
-  {
-    id: "feature-3",
-    icon: send,
-    title: "Balance Transfer",
-    content:
-      "A balance transfer credit card can save you a lot of money in interest charges.",
-  },
-];
-
 export const products = [
   {
     id: 1,
@@ -180,34 +156,104 @@ export const products = [
     imageAlt: 'Portrait of Mia Khalifa.',
   },
 
-]
-
-export const feedback = [
-  {
-    id: "feedback-1",
-    content:
-      "Money is only a tool. It will take you wherever you wish, but it will not replace you as the driver.",
-    name: "Herman Jensen",
-    title: "Founder & Leader",
-    img: people01,
-  },
-  {
-    id: "feedback-2",
-    content:
-      "Money makes your life easier. If you're lucky to have it, you're lucky.",
-    name: "Steve Mark",
-    title: "Founder & Leader",
-    img: people02,
-  },
-  {
-    id: "feedback-3",
-    content:
-      "It is usually people in the money business, finance, and international trade that are really rich.",
-    name: "Kenn Gallagher",
-    title: "Founder & Leader",
-    img: people03,
-  },
 ];
+export const suby1s1 = [
+  {
+    id: 333,
+    name: 'Computer Science',
+    path: 'cosc_y1s1',
+  },
+  {
+    id: 334,
+    name: 'Pure Maths',
+    path: 'pmat_y1s1',
+  },
+  {
+    id: 335,
+    name: 'Applied Maths',
+    path: 'amat_y1s1',
+  },
+  {
+    id: 336,
+    name: 'Physics',
+    path: 'phys_y1s1',
+  },
+  {
+    id: 337,
+    name: 'Chemistry',
+    path: 'chem_y1s1',
+  },
+  {
+    id: 338,
+    name: 'Statistics',
+    path: 'stat_y1s1',
+  },
+  {
+    id: 339,
+    name: 'Computer Studies',
+    path: 'cost_y1s1',
+  },
+  {
+    id: 338,
+    name: 'Study Music',
+    path: 'stdy',
+  },
+  {
+    id: 341,
+    name: 'More',
+    path: 'more',
+  },
+  
+];
+export const suby1s2 = [
+  {
+    id: 333,
+    name: 'Computer Science',
+    path: 'cosc_y1s2',
+  },
+  {
+    id: 334,
+    name: 'Pure Maths',
+    path: 'pmat_y1s2',
+  },
+  {
+    id: 335,
+    name: 'Applied Maths',
+    path: 'amat_y1s2',
+  },
+  {
+    id: 336,
+    name: 'Physics',
+    path: 'phys_y1s2',
+  },
+  {
+    id: 337,
+    name: 'Chemistry',
+    path: 'chem_y1s2',
+  },
+  {
+    id: 338,
+    name: 'Statistics',
+    path: 'stat_y1s2',
+  },
+  {
+    id: 339,
+    name: 'Computer Studies',
+    path: 'cost_y1s2',
+  },
+  {
+    id: 338,
+    name: 'Study Music',
+    path: 'stdy',
+  },
+  {
+    id: 341,
+    name: 'More',
+    path: 'more',
+  },
+  
+];
+
 export const doings = [
   {
     id: 1,
@@ -248,50 +294,6 @@ export const doings = [
 
 ];
 
-export const feedbacks = [
-  {
-    id: "feedback-1",
-    content:
-      "Money is only a tool. It will take you wherever you wish, but it will not replace you as the driver.",
-    name: "Herman Jensen",
-    title: "Founder & Leader",
-    img: people01,
-  },
-  {
-    id: "feedback-2",
-    content:
-      "Money makes your life easier. If you're lucky to have it, you're lucky.",
-    name: "Steve Mark",
-    title: "Founder & Leader",
-    img: people02,
-  },
-  {
-    id: "feedback-3",
-    content:
-      "It is usually people in the money business, finance, and international trade that are really rich.",
-    name: "Kenn Gallagher",
-    title: "Founder & Leader",
-    img: people03,
-  },
-];
-
-export const stats = [
-  {
-    id: "stats-1",
-    title: "User Active",
-    value: "3800+",
-  },
-  {
-    id: "stats-2",
-    title: "Trusted by Company",
-    value: "230+",
-  },
-  {
-    id: "stats-3",
-    title: "Transaction",
-    value: "$230M+",
-  },
-];
 
 export const footerLinks = [
 
@@ -339,23 +341,4 @@ export const socialMedia = [
     href: "https://www.instagram.com/dbros_vmaker/",
   },
  
-];
-
-export const clients = [
-  {
-    id: "client-1",
-    logo: airbnb,
-  },
-  {
-    id: "client-2",
-    logo: binance,
-  },
-  {
-    id: "client-3",
-    logo: coinbase,
-  },
-  {
-    id: "client-4",
-    logo: dropbox,
-  },
 ];

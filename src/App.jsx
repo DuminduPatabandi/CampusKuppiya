@@ -11,29 +11,25 @@ const router = createBrowserRouter(
       <Route path='kuppiya' element={ <Kuppiya/> }>    
 
         <Route path='year1' element={ <Year1/> } >
-
-          <Route path='y1s1' element={ <Y1S1/> } />
-          <Route path='y1s2' element={ <Y1S2/> } />
-          
+          <Route path='y1s1' element={ <Y1S1/> }/>
+          <Route path='y1s2' element={ <Y1S2/> } /> 
         </Route>
+
         <Route path='year2' element={ <Year2/> } >
-
-          <Route path='y2s1' element={ <Y2S1/> } />
+          <Route path='y2s1' element={ <Y2S1/> }/>
           <Route path='y2s2' element={ <Y2S2/> } />
-
         </Route>
-        <Route path='year3' element={ <Year3/> } >
 
+        <Route path='year3' element={ <Year3/> } >
           <Route path='y3s1' element={ <Y3S1/> } />
           <Route path='y3s2' element={ <Y3S2/> } />
-
         </Route>
-        <Route path='year4' element={ <Year4/> } >
 
+        <Route path='year4' element={ <Year4/> } >
           <Route path='y4s1' element={ <Y4S1/> } />
           <Route path='y4s2' element={ <Y4S2/> } />
-
         </Route>
+
       </Route>
       <Route path='videos' element={ <Video/> }/>
       <Route path='contact' element={ <Contact/> }/>
