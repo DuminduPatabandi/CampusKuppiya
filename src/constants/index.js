@@ -165,13 +165,13 @@ export const suby1s1 = [
   },
   {
     id: 334,
-    name: 'Pure Maths',
-    path: 'pmat_y1s1',
+    name: 'Applied Maths',
+    path: 'amat_y1s1',
   },
   {
     id: 335,
-    name: 'Applied Maths',
-    path: 'amat_y1s1',
+    name: 'Pure Maths',
+    path: 'pmat_y1s1',
   },
   {
     id: 336,
@@ -195,7 +195,7 @@ export const suby1s1 = [
   },
   {
     id: 338,
-    name: 'Study Music',
+    name: 'Relaxing Music',
     path: 'stdy',
   },
   {
@@ -207,47 +207,335 @@ export const suby1s1 = [
 ];
 export const suby1s2 = [
   {
-    id: 333,
+    id: 342,
     name: 'Computer Science',
     path: 'cosc_y1s2',
   },
   {
-    id: 334,
-    name: 'Pure Maths',
-    path: 'pmat_y1s2',
-  },
-  {
-    id: 335,
+    id: 343,
     name: 'Applied Maths',
     path: 'amat_y1s2',
   },
   {
-    id: 336,
+    id: 344,
+    name: 'Pure Maths',
+    path: 'pmat_y1s2',
+  },
+  {
+    id: 345,
     name: 'Physics',
     path: 'phys_y1s2',
   },
   {
-    id: 337,
+    id: 346,
     name: 'Chemistry',
     path: 'chem_y1s2',
   },
   {
-    id: 338,
+    id: 347,
     name: 'Statistics',
     path: 'stat_y1s2',
   },
   {
-    id: 339,
+    id: 348,
     name: 'Computer Studies',
     path: 'cost_y1s2',
   },
   {
-    id: 338,
-    name: 'Study Music',
+    id: 349,
+    name: 'Relaxing Music',
     path: 'stdy',
   },
   {
-    id: 341,
+    id: 350,
+    name: 'More',
+    path: 'more',
+  },
+  
+];
+export const suby2s1 = [
+  {
+    id: 351,
+    name: 'Computer Science',
+    path: 'cosc_y1s2',
+  },
+  {
+    id: 352,
+    name: 'Applied Maths',
+    path: 'amat_y1s2',
+  },
+  {
+    id: 353,
+    name: 'Pure Maths',
+    path: 'pmat_y1s2',
+  },
+  {
+    id: 354,
+    name: 'Physics',
+    path: 'phys_y1s2',
+  },
+  {
+    id: 355,
+    name: 'Chemistry',
+    path: 'chem_y1s2',
+  },
+  {
+    id: 356,
+    name: 'Statistics',
+    path: 'stat_y1s2',
+  },
+  {
+    id: 357,
+    name: 'Computer Studies',
+    path: 'cost_y1s2',
+  },
+  {
+    id: 358,
+    name: 'Relaxing Music',
+    path: 'stdy',
+  },
+  {
+    id: 359,
+    name: 'More',
+    path: 'more',
+  },
+  
+];
+export const suby2s2 = [
+  {
+    id: 360,
+    name: 'Computer Science',
+    path: 'cosc_y1s2',
+  },
+  {
+    id: 361,
+    name: 'Applied Maths',
+    path: 'amat_y1s2',
+  },
+  {
+    id: 362,
+    name: 'Pure Maths',
+    path: 'pmat_y1s2',
+  },
+  {
+    id: 363,
+    name: 'Physics',
+    path: 'phys_y1s2',
+  },
+  {
+    id: 364,
+    name: 'Chemistry',
+    path: 'chem_y1s2',
+  },
+  {
+    id: 365,
+    name: 'Statistics',
+    path: 'stat_y1s2',
+  },
+  {
+    id: 366,
+    name: 'Computer Studies',
+    path: 'cost_y1s2',
+  },
+  {
+    id: 367,
+    name: 'Relaxing Music',
+    path: 'stdy',
+  },
+  {
+    id: 368,
+    name: 'More',
+    path: 'more',
+  },
+  
+];
+export const suby3s1 = [
+  {
+    id: 369,
+    name: 'Computer Science',
+    path: 'cosc_y1s2',
+  },
+  {
+    id: 370,
+    name: 'Applied Maths',
+    path: 'amat_y1s2',
+  },
+  {
+    id: 371,
+    name: 'Pure Maths',
+    path: 'pmat_y1s2',
+  },
+  {
+    id: 372,
+    name: 'Physics',
+    path: 'phys_y1s2',
+  },
+  {
+    id: 373,
+    name: 'Chemistry',
+    path: 'chem_y1s2',
+  },
+  {
+    id: 374,
+    name: 'Statistics',
+    path: 'stat_y1s2',
+  },
+  {
+    id: 375,
+    name: 'Computer Studies',
+    path: 'cost_y1s2',
+  },
+  {
+    id: 376,
+    name: 'Relaxing Music',
+    path: 'stdy',
+  },
+  {
+    id: 377,
+    name: 'More',
+    path: 'more',
+  },
+  
+];
+export const suby3s2 = [
+  {
+    id: 378,
+    name: 'Computer Science',
+    path: 'cosc_y1s2',
+  },
+  {
+    id: 379,
+    name: 'Applied Maths',
+    path: 'amat_y1s2',
+  },
+  {
+    id: 380,
+    name: 'Pure Maths',
+    path: 'pmat_y1s2',
+  },
+  {
+    id: 381,
+    name: 'Physics',
+    path: 'phys_y1s2',
+  },
+  {
+    id: 382,
+    name: 'Chemistry',
+    path: 'chem_y1s2',
+  },
+  {
+    id: 383,
+    name: 'Statistics',
+    path: 'stat_y1s2',
+  },
+  {
+    id: 384,
+    name: 'Computer Studies',
+    path: 'cost_y1s2',
+  },
+  {
+    id: 385,
+    name: 'Relaxing Music',
+    path: 'stdy',
+  },
+  {
+    id: 386,
+    name: 'More',
+    path: 'more',
+  },
+  
+];
+export const suby4s1 = [
+  {
+    id: 387,
+    name: 'Computer Science',
+    path: 'cosc_y1s2',
+  },
+  {
+    id: 388,
+    name: 'Applied Maths',
+    path: 'amat_y1s2',
+  },
+  {
+    id: 389,
+    name: 'Pure Maths',
+    path: 'pmat_y1s2',
+  },
+  {
+    id: 390,
+    name: 'Physics',
+    path: 'phys_y1s2',
+  },
+  {
+    id: 391,
+    name: 'Chemistry',
+    path: 'chem_y1s2',
+  },
+  {
+    id: 392,
+    name: 'Statistics',
+    path: 'stat_y1s2',
+  },
+  {
+    id: 393,
+    name: 'Computer Studies',
+    path: 'cost_y1s2',
+  },
+  {
+    id: 394,
+    name: 'Relaxing Music',
+    path: 'stdy',
+  },
+  {
+    id: 395,
+    name: 'More',
+    path: 'more',
+  },
+  
+];
+export const suby4s2 = [
+  {
+    id: 396,
+    name: 'Computer Science',
+    path: 'cosc_y1s2',
+  },
+  {
+    id: 397,
+    name: 'Applied Maths',
+    path: 'amat_y1s2',
+  },
+  {
+    id: 398,
+    name: 'Pure Maths',
+    path: 'pmat_y1s2',
+  },
+  {
+    id: 399,
+    name: 'Physics',
+    path: 'phys_y1s2',
+  },
+  {
+    id: 400,
+    name: 'Chemistry',
+    path: 'chem_y1s2',
+  },
+  {
+    id: 401,
+    name: 'Statistics',
+    path: 'stat_y1s2',
+  },
+  {
+    id: 402,
+    name: 'Computer Studies',
+    path: 'cost_y1s2',
+  },
+  {
+    id: 403,
+    name: 'Relaxing Music',
+    path: 'stdy',
+  },
+  {
+    id: 404,
     name: 'More',
     path: 'more',
   },
