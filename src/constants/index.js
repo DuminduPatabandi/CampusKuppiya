@@ -257,37 +257,37 @@ export const suby2s1 = [
   {
     id: 351,
     name: 'Computer Science',
-    path: 'cosc_y1s2',
+    path: '/cosc_y2s1',
   },
   {
     id: 352,
     name: 'Applied Maths',
-    path: 'amat_y1s2',
+    path: '/amat_y2s1',
   },
   {
     id: 353,
     name: 'Pure Maths',
-    path: 'pmat_y1s2',
+    path: '/pmat_y2s1',
   },
   {
     id: 354,
     name: 'Physics',
-    path: 'phys_y1s2',
+    path: '/phys_y2s1',
   },
   {
     id: 355,
     name: 'Chemistry',
-    path: 'chem_y1s2',
+    path: '/chem_y2s1',
   },
   {
     id: 356,
     name: 'Statistics',
-    path: 'stat_y1s2',
+    path: '/stat_y2s1',
   },
   {
     id: 357,
     name: 'Computer Studies',
-    path: 'cost_y1s2',
+    path: '/cost_y2s1',
   },
   {
     id: 358,
@@ -305,37 +305,37 @@ export const suby2s2 = [
   {
     id: 360,
     name: 'Computer Science',
-    path: 'cosc_y1s2',
+    path: '/cosc_y2s2',
   },
   {
     id: 361,
     name: 'Applied Maths',
-    path: 'amat_y1s2',
+    path: '/amat_y2s2',
   },
   {
     id: 362,
     name: 'Pure Maths',
-    path: 'pmat_y1s2',
+    path: '/pmat_y2s2',
   },
   {
     id: 363,
     name: 'Physics',
-    path: 'phys_y1s2',
+    path: '/phys_y2s2',
   },
   {
     id: 364,
     name: 'Chemistry',
-    path: 'chem_y1s2',
+    path: '/chem_y2s2',
   },
   {
     id: 365,
     name: 'Statistics',
-    path: 'stat_y1s2',
+    path: '/stat_y2s2',
   },
   {
     id: 366,
     name: 'Computer Studies',
-    path: 'cost_y1s2',
+    path: '/cost_y2s2',
   },
   {
     id: 367,
@@ -353,37 +353,37 @@ export const suby3s1 = [
   {
     id: 369,
     name: 'Computer Science',
-    path: 'cosc_y1s2',
+    path: '/cosc_y3s1',
   },
   {
     id: 370,
     name: 'Applied Maths',
-    path: 'amat_y1s2',
+    path: '/amat_y3s1',
   },
   {
     id: 371,
     name: 'Pure Maths',
-    path: 'pmat_y1s2',
+    path: '/pmat_y3s1',
   },
   {
     id: 372,
     name: 'Physics',
-    path: 'phys_y1s2',
+    path: '/phys_y3s1',
   },
   {
     id: 373,
     name: 'Chemistry',
-    path: 'chem_y1s2',
+    path: '/chem_y3s1',
   },
   {
     id: 374,
     name: 'Statistics',
-    path: 'stat_y1s2',
+    path: '/stat_y3s1',
   },
   {
     id: 375,
     name: 'Computer Studies',
-    path: 'cost_y1s2',
+    path: '/cost_y3s1',
   },
   {
     id: 376,
@@ -401,37 +401,37 @@ export const suby3s2 = [
   {
     id: 378,
     name: 'Computer Science',
-    path: 'cosc_y1s2',
+    path: '/cosc_y3s2',
   },
   {
     id: 379,
     name: 'Applied Maths',
-    path: 'amat_y1s2',
+    path: '/amat_y3s2',
   },
   {
     id: 380,
     name: 'Pure Maths',
-    path: 'pmat_y1s2',
+    path: '/pmat_y3s2',
   },
   {
     id: 381,
     name: 'Physics',
-    path: 'phys_y1s2',
+    path: '/phys_y3s2',
   },
   {
     id: 382,
     name: 'Chemistry',
-    path: 'chem_y1s2',
+    path: '/chem_y3s2',
   },
   {
     id: 383,
     name: 'Statistics',
-    path: 'stat_y1s2',
+    path: '/stat_y3s2',
   },
   {
     id: 384,
     name: 'Computer Studies',
-    path: 'cost_y1s2',
+    path: '/cost_y3s2',
   },
   {
     id: 385,
@@ -449,37 +449,37 @@ export const suby4s1 = [
   {
     id: 387,
     name: 'Computer Science',
-    path: 'cosc_y1s2',
+    path: '/cosc_y4s1',
   },
   {
     id: 388,
     name: 'Applied Maths',
-    path: 'amat_y1s2',
+    path: '/amat_y4s1',
   },
   {
     id: 389,
     name: 'Pure Maths',
-    path: 'pmat_y1s2',
+    path: '/pmat_y4s1',
   },
   {
     id: 390,
     name: 'Physics',
-    path: 'phys_y1s2',
+    path: '/phys_y4s1',
   },
   {
     id: 391,
     name: 'Chemistry',
-    path: 'chem_y1s2',
+    path: '/chem_y4s1',
   },
   {
     id: 392,
     name: 'Statistics',
-    path: 'stat_y1s2',
+    path: '/stat_y4s1',
   },
   {
     id: 393,
     name: 'Computer Studies',
-    path: 'cost_y1s2',
+    path: '/cost_y4s1',
   },
   {
     id: 394,
@@ -497,37 +497,37 @@ export const suby4s2 = [
   {
     id: 396,
     name: 'Computer Science',
-    path: 'cosc_y1s2',
+    path: '/cosc_y4s2',
   },
   {
     id: 397,
     name: 'Applied Maths',
-    path: 'amat_y1s2',
+    path: '/amat_y4s2',
   },
   {
     id: 398,
     name: 'Pure Maths',
-    path: 'pmat_y1s2',
+    path: '/pmat_y4s2',
   },
   {
     id: 399,
     name: 'Physics',
-    path: 'phys_y1s2',
+    path: '/phys_y4s2',
   },
   {
     id: 400,
     name: 'Chemistry',
-    path: 'chem_y1s2',
+    path: '/chem_y4s2',
   },
   {
     id: 401,
     name: 'Statistics',
-    path: 'stat_y1s2',
+    path: '/stat_y4s2',
   },
   {
     id: 402,
     name: 'Computer Studies',
-    path: 'cost_y1s2',
+    path: '/cost_y4s2',
   },
   {
     id: 403,
