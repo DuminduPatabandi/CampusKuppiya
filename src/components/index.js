@@ -1,5 +1,6 @@
 import Navbar from "./Navbar";
 import LogoArea from "./LogoArea";
+import AboutArea from "./AboutArea";
 import Year1 from "./Year1";
 import Year2 from "./Year2";
 import Year3 from "./Year3";
@@ -32,6 +33,7 @@ export {
     Y4S2,
     Navbar,
     LogoArea,
+    AboutArea,
     Year1,
     Year2,
     Year3,

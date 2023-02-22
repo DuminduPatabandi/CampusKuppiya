@@ -1,12 +1,23 @@
+import {AboutArea, Work} from '../components'
+import styles from '../style'
+
 const About = () => {
-    return (
-      <div className="about bg-black">
-          <h1>Hello About</h1>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates quibusdam, illum quod commodi, eos, ad minus a quam aspernatur cum magnam velit explicabo! Obcaecati maiores itaque iure ducimus dicta sit maxime adipisci ad esse voluptatem hic, laudantium quisquam! Cumque, expedita quia tenetur reprehenderit, sed numquam non hic magnam dicta suscipit </p>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates quibusdam, illum quod commodi, eos, ad minus a quam aspernatur cum magnam velit explicabo! Obcaecati maiores itaque iure ducimus dicta sit maxime adipisci ad esse voluptatem hic, laudantium quisquam! Cumque, expedita quia tenetur reprehenderit, sed numquam non hic magnam dicta suscipit </p>
+  return (
+    <div className="home ">
+      <div className= {` ${styles.paddingX} ${styles.flexStart} bg-[#ffffff] py-[12.1rem]  w-full`}>
+        <div className={`${styles.boxWidth}`}>
+            <AboutArea/>
+        </div>
       </div>
-  
-    )
-  }
-  
-  export default About
+      {/* <div className= {` ${styles.paddingX} ${styles.flexStart} bg-[#ffffff]   w-full`}>
+        <div className={`${styles.boxWidth}`}>
+            <Work />
+        </div>
+      </div> */}
+
+    </div>
+
+  )
+}
+
+export default About
