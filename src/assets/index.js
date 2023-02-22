@@ -28,6 +28,7 @@ import github from "./github.svg";
 import drunkenwizard_dark from "./drunkenwizard_dark.svg";
 import kuppi from "./kuppi.svg";
 import kuppilogo from "./kuppilogo.svg";
+import kuppilogodark from "./kuppilogodark.svg";
 import mainlogo from "./mainlogo.svg";
 
 export {
@@ -37,6 +38,7 @@ export {
   github,
   drunkenwizard_dark,
   kuppilogo,
+  kuppilogodark,
   mainlogo,
   mymenu,
   closing,

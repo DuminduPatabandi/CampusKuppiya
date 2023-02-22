@@ -99,6 +99,33 @@ export const navLinks = [
     path: "contact"
   },
 ];
+export const footerNavLinks = [
+  {
+    id: "home",
+    title: "HOME",
+    path: "/"
+  },
+  {
+    id: "about",
+    title: "ABOUT",
+    path: "/about"
+  },
+  {
+    id: "kuppiya",
+    title: "KUPPIYA",
+    path: "/kuppiya"
+  },
+  {
+    id: "videos",
+    title: "VIDEOS",
+    path: "/videos"
+  },
+  {
+    id: "contact",
+    title: "CONTACT",
+    path: "/contact"
+  },
+];
 
 export const products = [
   {

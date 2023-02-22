@@ -1,5 +1,6 @@
 import React from 'react'
-import { navLinks } from '../constants'
+import { footerNavLinks } from '../constants'
+import { NavLink } from 'react-router-dom'
 import { socialMedia } from '../constants'
 import { footerLinks } from '../constants'
 import {drunkenwizard_dark} from '../assets'
@@ -20,7 +21,7 @@ const FooterLarge = () => (
         <nav class="list-none mb-10">
         <ul className='text-white '>
 
-            {navLinks.map((nav, index) => (
+            {footerNavLinks.map((nav, index) => (
               <li 
                 key={nav.id}
                 className = {`pb-[1.6rem] `}
