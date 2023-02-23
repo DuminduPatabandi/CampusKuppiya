@@ -15,7 +15,7 @@ module.exports = {
         montserrat: ["Montserrat", "sans-serif"],
         shadows: ['Shadows Into Light', "cursive"],
         maya: ['Jolly Lodger', 'cursive'],
-        merry: ['Merriweather', 'serif'],
+        eb: ['EB Garamond', 'serif'],
       },
     },
     screens: {
