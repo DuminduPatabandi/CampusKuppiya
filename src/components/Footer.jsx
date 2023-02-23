@@ -91,10 +91,10 @@ const FooterLarge = () => (
 
   <div class="bg-gray-100">
     <div class="container mx-auto py-4 px-5 text-center">
-      <p class="text-gray-500 text-sm">© 2023 Drunkenwizards —
-        <a href="https://www.linkedin.com/in/d-p-patabandi/" rel="noopener noreferrer" class="text-gray-600 ml-1" target="_blank">@Wizards</a>
+      <p class="text-gray-500 text-sm">© 2023 Campus Kuppiya —
+        <a href="https://www.linkedin.com/in/d-p-patabandi/" rel="noopener noreferrer" class="text-gray-600 ml-1" target="_blank">@DrunkenWizards</a>
       </p>
-      <p class="text-gray-500  pt-2 text-[0.6rem]">A PRODUCT OF DUMINDU PATBANDI</p>
+      <p class="text-gray-500  pt-2 text-[0.6rem]">A PRODUCT OF DUMINDU PATABANDI</p>
         
     </div>
   </div>
