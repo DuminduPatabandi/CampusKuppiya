@@ -7,7 +7,11 @@ const FormArea = () => {
     <section id='home' className={` ${styles.paddingY} my-0 sm:my-4 `}>
     <div className='flex flex-col  justify-center items-center '>
       <img src={kuppilogo} alt="site-logo" className='w-[6rem] h-[6rem] object-contain mt-4  sm:mt-10 ' />
+      <p className=' font-eb w-1/2  text-[#ffffff] text-[1.6rem] text-center pt-14'>
+      Hay Education seekers! Feel free to contact us for anything at all. We are here for you!
+      </p>
     </div>
+   
 
 {/* Form */}
 
@@ -49,7 +53,7 @@ const FormArea = () => {
       </div> 
       <div className='text-center'>
         <button
-          class="hover:shadow-form bg-[#002ead] py-3 px-10 mt-8 font-montserrat font-medium text-white outline-none"
+          class="hover:shadow-form bg-[#002ead] hover:bg-white hover:text-[#002ead] duration-700 py-3 px-10 mt-8 font-montserrat font-medium text-white outline-none"
         >
           Submit
         </button>

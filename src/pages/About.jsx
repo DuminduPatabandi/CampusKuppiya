@@ -9,12 +9,6 @@ const About = () => {
             <AboutArea/>
         </div>
       </div>
-      {/* <div className= {` ${styles.paddingX} ${styles.flexStart} bg-[#ffffff]   w-full`}>
-        <div className={`${styles.boxWidth}`}>
-            <Work />
-        </div>
-      </div> */}
-
     </div>
 
   )
