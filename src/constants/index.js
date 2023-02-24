@@ -148,7 +148,7 @@ export const formElements = [
   {
     id: 'subject',
     for: 'subject',
-    type: 'email',
+    type: 'text',
     title: 'How did you find us?',
     name: 'subject',
     placeholder: 'Just say anything :)',
