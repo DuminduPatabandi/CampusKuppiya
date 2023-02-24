@@ -127,63 +127,34 @@ export const footerNavLinks = [
   },
 ];
 
-export const products = [
-  {
-    id: 1,
-    name: 'Breaking Bad RV',
-    mywork:'3D Modeling',
-    href: '#',
-    price: '$48',
-    imageSrc: 'bbRv',
-    imageAlt: '3D model of Breaking Bad RV.',
-  },
-  {
-    id: 2,
-    name: 'SCSSA Logo',
-    mywork:'Logo Designing',
-    href: '#',
-    price: '$35',
-    imageSrc: 'logoscssa',
-    imageAlt: 'Logo Design of SCSSA, Universityof Kelaniya.',
-  },
-  {
-    id: 3,
-    name: 'Drunkenwizard Website',
-    mywork:'Web Designing',
-    href: '#',
-    price: '$89',
-    imageSrc: 'websitedesign',
-    imageAlt: 'Front-End design of Drunkenwizards website.',
-  },
-  {
-    id: 4,
-    name: 'Statistical Book SCSSA',
-    mywork:'Magazines',
-    href: '#',
-    price: '$35',
-    imageSrc: 'statbook',
-    imageAlt: 'Statistical Book design for SCSSA, University of Kelaniyaks.',
-  },
-  {
-    id: 5,
-    name: 'Flat Illustration of a girl',
-    mywork:'Flat Illustrations',
-    href: '#',
-    price: '$35',
-    imageSrc: 'girlWhite',
-    imageAlt: 'Flat illustration of a girl.',
-  },
-  {
-    id: 6,
-    name: 'Portrait of Mia Khalifa',
-    mywork:'Colorful Portraits',
-    href: '#',
-    price: '$35',
-    imageSrc: 'mia',
-    imageAlt: 'Portrait of Mia Khalifa.',
-  },
 
+export const formElements = [
+  {
+    id: 'name',
+    for: 'name',
+    type: 'text',
+    title: 'Full Name',
+    name: 'name',
+    placeholder: 'Full Name',
+  },
+  {
+    id: 'email',
+    for: 'email',
+    type: 'email',
+    title: 'Email',
+    name: 'email',
+    placeholder: 'example@domain.com',
+  },
+  {
+    id: 'subject',
+    for: 'subject',
+    type: 'email',
+    title: 'How did you find us?',
+    name: 'subject',
+    placeholder: 'Just say anything :)',
+  },
 ];
+
 export const suby1s1 = [
   {
     id: 333,

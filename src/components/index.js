@@ -8,6 +8,7 @@ import Year4 from "./Year4";
 import YearNav from "./YearNav";
 import Footer from "./Footer";
 import Work from "./Work";
+import FormArea from "./FormArea";
 import SemNav1 from "./SemNav1";
 import SemNav2 from "./SemNav2";
 import SemNav3 from "./SemNav3";
@@ -34,6 +35,7 @@ export {
     Navbar,
     LogoArea,
     AboutArea,
+    FormArea,
     Year1,
     Year2,
     Year3,

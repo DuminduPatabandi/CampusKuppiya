@@ -1,4 +1,4 @@
-import { doings, products } from '../constants'
+import { doings } from '../constants'
 import styles from '../style'
 
 export default function Example() {
