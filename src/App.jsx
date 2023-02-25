@@ -1,4 +1,6 @@
 import styles from './style'
+import { motion, useScroll } from "framer-motion";
+
 import {Footer, Navbar, Year1, Year2, Year3, Year4, Y1S1, Y1S2, Y2S1, Y2S2, Y3S1, Y3S2, Y4S1, Y4S2} from './components'
 import { Y1S1AMAT, Y1S1CHEM, Y1S1COSC, Y1S1COST, Y1S1PHYS, Y1S1PMAT, Y1S1STAT } from './contents'
 import { Y1S2AMAT, Y1S2CHEM, Y1S2COSC, Y1S2COST, Y1S2PHYS, Y1S2PMAT, Y1S2STAT } from './contents'
@@ -129,12 +131,21 @@ const router = createBrowserRouter(
 )
 
 
+
+
 const App = () => {
+
+  const { scrollYProgress } = useScroll();
   return (
     // Navigation bar
 
       <div className=' overflow-hidden bg-[#002ead] w-full'>
         <RouterProvider router={router} />
+        
+      <motion.div
+        className="progress-bar"
+        style={{ scaleX: scrollYProgress }}
+      />
         <Footer />
       </div>
 
