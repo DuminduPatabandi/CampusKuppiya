@@ -21,6 +21,7 @@ import Y3S1 from "./Y3S1";
 import Y3S2 from "./Y3S2";
 import Y4S1 from "./Y4S1";
 import Y4S2 from "./Y4S2";
+import Development from "./Development";
 
 
 export {
@@ -36,6 +37,7 @@ export {
     LogoArea,
     AboutArea,
     FormArea,
+    Development,
     Year1,
     Year2,
     Year3,

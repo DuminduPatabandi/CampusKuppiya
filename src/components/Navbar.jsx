@@ -14,13 +14,13 @@ const Navbar = () => {
     <div className="root-layout">
 
 
-      <nav className='w-full bg-[#002ead] py-[0.8rem] navbar fixed'>
+      <nav className='w-full  bg-[#002ead] py-[0.8rem] navbar fixed'>
       
         <ul className='list-none sm:flex hidden justify-center items-center'>
           {navLinks.map((nav, index) => (
             <li
               key={nav.id}
-              className = {`font-montserrat text-[#edf2f4] hover:text-[#0a0a23]  duration-700 cursor-pointer font-bold text-[.76rem] py-1 mx-6 `}>
+              className = {`font-montserrat  text-[#edf2f4] hover:text-[#0a0a23]  duration-700 cursor-pointer font-bold text-[.76rem] py-1 mx-6 `}>
               <NavLink to ={`${nav.path}`}>
                 {nav.title}
               </NavLink>

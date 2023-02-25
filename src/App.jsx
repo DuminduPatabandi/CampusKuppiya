@@ -135,17 +135,28 @@ const router = createBrowserRouter(
 
 const App = () => {
 
+  var cursor = document.querySelector(".cursor");
+        var cursor2 = document.querySelector(".cursor2");
+        document.addEventListener("mousemove",function(e) {
+            cursor.style.cssText = cursor2.style.cssText = "left:" + e.clientX + "px; top: " + e.clientY + "px;"
+        });
+
   const { scrollYProgress } = useScroll();
+  
   return (
     // Navigation bar
 
       <div className=' overflow-hidden bg-[#002ead] w-full'>
         <RouterProvider router={router} />
         
-      <motion.div
-        className="progress-bar"
-        style={{ scaleX: scrollYProgress }}
-      />
+        <motion.div
+          className="progress-bar"
+          style={{ scaleX: scrollYProgress }}
+        />
+
+        {/* <div class="cursor"></div>
+        <div class="cursor2"></div> */}
+
         <Footer />
       </div>
 
