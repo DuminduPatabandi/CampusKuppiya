@@ -152,3 +152,41 @@ nav ul li a.active {
   background-color: #ed2939;
   transform-origin: 0%;
 }
+
+
+.cursor {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #c6c6c6;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: .1s;
+}
+
+.cursor2 {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background-color: #c6c6c6;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: .15s;
+}
+
+/* .logo:hover ~ .cursor {
+  transform: translate(-50%, -50%) scale(1.5);
+  background-color: #c6c6c6;
+  opacity: .5;
+  background-color: rgb(255, 254, 254);
+}
+
+.logo:hover ~ .cursor2 {
+  opacity: 0;
+} */
