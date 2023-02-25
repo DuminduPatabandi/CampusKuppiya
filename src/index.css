@@ -142,3 +142,13 @@
 nav ul li a.active {
   color: #ed2939;
 }
+
+.progress-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background-color: #ed2939;
+  transform-origin: 0%;
+}
