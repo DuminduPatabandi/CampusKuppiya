@@ -13,26 +13,14 @@ import SemNav1 from "./SemNav1";
 import SemNav2 from "./SemNav2";
 import SemNav3 from "./SemNav3";
 import SemNav4 from "./SemNav4";
-import Y1S1 from "./Y1S1";
-import Y1S2 from "./Y1S2";
-import Y2S1 from "./Y2S1";
-import Y2S2 from "./Y2S2";
-import Y3S1 from "./Y3S1";
-import Y3S2 from "./Y3S2";
-import Y4S1 from "./Y4S1";
-import Y4S2 from "./Y4S2";
+import Semester1 from "./Semester1";
+import Semester2 from "./Semester2";
 import Development from "./Development";
 
 
 export {
-    Y1S1,
-    Y1S2,
-    Y2S1,
-    Y2S2,
-    Y3S1,
-    Y3S2,
-    Y4S1,
-    Y4S2,
+    Semester1,
+    Semester2,
     Navbar,
     LogoArea,
     AboutArea,

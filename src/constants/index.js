@@ -27,48 +27,48 @@ export const Y1Semesters = [
   {
     id: "y1s1",
     title: "SEMESTER 1",
-    path: "y1s1"
+    path: "sem1"
   },
   {
     id: "y1s2",
     title: "SEMESTER 2",
-    path: "y1s2"
+    path: "sem2"
   },
 ];
 export const Y2Semesters = [
   {
     id: "y2s1",
     title: "SEMESTER 1",
-    path: "y2s1"
+    path: "sem1"
   },
   {
     id: "y2s2",
     title: "SEMESTER 2",
-    path: "y2s2"
+    path: "sem2"
   },
 ];
 export const Y3Semesters = [
   {
     id: "y3s1",
     title: "SEMESTER 1",
-    path: "y3s1"
+    path: "sem1"
   },
   {
     id: "y3s2",
     title: "SEMESTER 2",
-    path: "y3s2"
+    path: "sem2"
   },
 ];
 export const Y4Semesters = [
   {
     id: "y4s1",
     title: "SEMESTER 1",
-    path: "y4s1"
+    path: "sem1"
   },
   {
     id: "y4s2",
     title: "SEMESTER 2",
-    path: "y4s2"
+    path: "sem2"
   },
 ];
 
@@ -159,42 +159,42 @@ export const suby1s1 = [
   {
     id: 333,
     name: 'Computer Science',
-    path: '/cosc_y1s1',
+    path: 'cosc',
   },
   {
     id: 334,
     name: 'Applied Maths',
-    path: '/amat_y1s1',
+    path: '/amat',
   },
   {
     id: 335,
     name: 'Pure Maths',
-    path: '/pmat_y1s1',
+    path: '/pmat',
   },
   {
     id: 336,
     name: 'Physics',
-    path: '/phys_y1s1',
+    path: '/phys',
   },
   {
     id: 337,
     name: 'Chemistry',
-    path: '/chem_y1s1',
+    path: '/chem',
   },
   {
     id: 338,
     name: 'Statistics',
-    path: '/stat_y1s1',
+    path: '/stat',
   },
   {
     id: 339,
     name: 'Computer Studies',
-    path: '/cost_y1s1',
+    path: '/cost',
   },
   {
     id: 338,
     name: 'Relaxing Music',
-    path: 'stdy',
+    path: 'music',
   },
   {
     id: 341,
