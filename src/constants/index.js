@@ -1,4 +1,4 @@
-import { people01, people02, people03, facebook, fb, github, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star, } from "../assets";
+import {facebook, github, instagram, linkedin, twitter, } from "../assets";
 
 export const YearLinks = [
   {
