@@ -79,7 +79,7 @@ const Login = () => {
                     <span className="mx-2">Sign in with Google</span>
                 </a>
 
-                <div className="pt-9">
+                <div className="pt-9 text-center">
                     <Link to="/reset">Forgot Password</Link>
                 </div>
 

@@ -33,7 +33,7 @@ const Register = () => {
       <img src={kuppilogo} alt="site-logo" className='w-[8rem] h-[8rem] logo object-contain mt-32  sm:mt-10 ' />
     </div>
 
-            <h1 class=" text-2xl font-semibold text-white capitalize sm:text-3xl ">sign In</h1>
+            <h1 class=" text-2xl font-semibold text-white capitalize sm:text-3xl ">sign Up</h1>
 
             <div class="relative flex items-center mt-8">
                 <span className="absolute">
@@ -51,7 +51,7 @@ const Register = () => {
                 />
             </div>
 
-            <div class="relative flex items-center mt-8">
+            <div class="relative flex items-center mt-4">
                 <span className="absolute">
                     <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 mx-3 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -104,7 +104,7 @@ const Register = () => {
 
                 <div className="mt-6 text-center ">
                     Already have an account?
-                    <Link to="/login" className="text-sm text-blue-500 hover:underline ">
+                    <Link to="/login" className="text-sm px-3 text-blue-500 hover:underline ">
                     Login
                     </Link>
                     now
