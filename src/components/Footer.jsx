@@ -63,7 +63,7 @@ const FooterLarge = () => (
         </nav>
       </div>
 
-      <div class="lg:w-1/3 md:w-1/2 text-white w-full px-4">
+      <div class="lg:w-1/3 md:w-1/2 text-white w-full  px-4">
       <h2 class="title-font font-medium tracking-widest  text-[1rem] mb-4">OUR SOCIALS</h2>
         <nav class="list-none mb-10">
         <ul className='social'>

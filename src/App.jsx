@@ -34,6 +34,7 @@ import {
   createRoutesFromElements,
   RouterProvider,
 } from "react-router-dom";
+import { subjectsLoader } from "./components/Semester1";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -46,23 +47,23 @@ const router = createBrowserRouter(
       <Route path="kuppiya" element={<Kuppiya />}>
 
         <Route path="year1" element={<Year1 />}>
-          <Route path="sem1" element={<Semester1 />} />
-          <Route path="sem2" element={<Semester2 />} />
+          <Route path="sem1" element={<Semester1 />} loader={subjectsLoader} />
+          <Route path="sem2" element={<Semester2 />} loader={subjectsLoader} />
         </Route>
 
         <Route path="year2" element={<Year2 />}>
-          <Route path="sem1" element={<Semester1 />} />
-          <Route path="sem2" element={<Semester2 />} />
+          <Route path="sem1" element={<Semester1 />} loader={subjectsLoader} />
+          <Route path="sem2" element={<Semester2 />} loader={subjectsLoader} />
         </Route>
 
         <Route path="year3" element={<Year3 />}>
-          <Route path="sem1" element={<Semester1 />} />
-          <Route path="sem2" element={<Semester2 />} />
+          <Route path="sem1" element={<Semester1 />} loader={subjectsLoader} />
+          <Route path="sem2" element={<Semester2 />} loader={subjectsLoader} />
         </Route>
 
         <Route path="year4" element={<Year4 />}>
-          <Route path="sem1" element={<Semester1 />} />
-          <Route path="sem2" element={<Semester2 />} />
+          <Route path="sem1" element={<Semester1 />} loader={subjectsLoader} />
+          <Route path="sem2" element={<Semester2 />} loader={subjectsLoader} />
         </Route>
       </Route>
       

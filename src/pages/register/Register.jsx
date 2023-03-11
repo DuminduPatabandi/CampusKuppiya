@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link,useNavigate  } from "react-router-dom";
-import { kuppilogo} from "../../assets";
+import { kuppilogo } from "../../assets";
 import {
   auth,
   registerWithEmailAndPassword,
@@ -24,7 +24,7 @@ const Register = () => {
     if (user) navigate("/");
   }, [user, loading]);
   return (
-    <section className="">
+    <section className="z-5">
 
     <div className="container flex items-center justify-center min-h-screen px-6 mx-auto">
         <form className="w-full max-w-md">
@@ -84,7 +84,10 @@ const Register = () => {
             <div className="mt-6">
                 <button 
                 className="w-full px-6 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-lg hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50"
-                onClick={register}>
+                onClick={(e) => {
+                    e.preventDefault();
+                    register();
+                }}>
                     Sign Up
                 </button>
 
@@ -113,6 +116,7 @@ const Register = () => {
         </form>
     </div>
 </section>
+
   );
 };
 export default Register;
