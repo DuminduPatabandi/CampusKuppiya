@@ -1,4 +1,5 @@
 import { initializeApp } from "firebase/app";
+import { getAnalytics,logEvent } from "firebase/analytics";
 import {
   GoogleAuthProvider,
   getAuth,
@@ -26,6 +27,9 @@ const firebaseConfig = {
   appId: "1:117475081151:web:b708b12863fe04aea2ff0a",
 };
 const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+// analytics.setUserID("123456");
+logEvent(analytics, 'notification_received-log');
 export const auth = getAuth(app);
 export const db = getFirestore(app);
 const googleProvider = new GoogleAuthProvider();
@@ -51,6 +55,7 @@ export const signInWithGoogle = async () => {
 };
 
 export const logInWithEmailAndPassword = async (email, password) => {
+  console.log("user:"+email);
   try {
     await signInWithEmailAndPassword(auth, email, password);
   } catch (err) {
