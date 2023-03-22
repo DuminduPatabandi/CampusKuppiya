@@ -7,8 +7,8 @@ const FormArea = () => {
     <section id='home' className={` ${styles.paddingY} my-0 sm:my-4 `}>
     <div className='flex flex-col  justify-center items-center '>
       <img src={kuppilogo} alt="site-logo" className='w-[6rem] h-[6rem] object-contain mt-4  sm:mt-10 ' />
-      <p className=' font-eb w-1/2  text-[#ffffff] text-[1.6rem] text-center pt-14'>
-      Hay Education seekers! Feel free to contact us for anything at all. We are here for you!
+      <p className=' font-eb w-1/2 md:mt-16 md:mb-44 text-[#ffffff] text-[2.8rem] text-center pt-14'>
+      Contact Us
       </p>
     </div>
    
@@ -32,7 +32,7 @@ const FormArea = () => {
           name={product.name}
           id={product.id}
           placeholder={product.placeholder}
-          className="w-full  border border-[#e0e0e0] bg-white font-eb py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#819be1] focus:shadow-md mb-8 focus:border-4"/>
+          className="w-full outline outlinr-[#e0e0e0] bg-[#e0e0e0] font-eb py-3 px-6 text-base font-medium text-[#6B7280] outline-offset-0 outline-none focus:outline-[#819be1] focus:shadow-md mb-8 focus:outline-4"/>
           </div>
         ))}
       </div>
@@ -49,13 +49,13 @@ const FormArea = () => {
           name="message"
           id="message"
           placeholder="Type what you need to say to us!"
-          class="w-full border border-[#e0e0e0] bg-white font-eb py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#819be1] focus:shadow-md focus:border-4"></textarea>
+          class="w-full outline outlinr-[#e0e0e0] bg-[#e0e0e0] font-eb py-3 px-6 text-base font-medium text-[#6B7280] outline-offset-0 outline-none focus:outline-[#819be1] focus:shadow-md mb-8 focus:outline-4"></textarea>
       </div> 
       <div className='text-center'>
         <button
-          class="hover:shadow-form bg-[#002ead] hover:bg-white hover:text-[#002ead] duration-700 py-3 px-10 mt-8 font-montserrat font-medium text-white outline-none"
+          class="hover:shadow-form bg-[#002ead] hover:bg-[#0a0a23] hover:px-16 hover:text-[#002ead] duration-700 py-3 px-10 mt-8 font-montserrat font-bold text-white outline-none"
         >
-          Submit
+          SEND
         </button>
       </div>
     </form>

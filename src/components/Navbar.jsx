@@ -30,10 +30,10 @@ const Navbar = () => {
           ))}
           {user ? (
             <li
-              className={`font-montserrat  text-[#edf2f4] hover:text-[#0a0a23]  duration-700 cursor-pointer font-bold text-[.76rem] py-1 mx-6 `}
+              className={`font-montserrat lg:fixed lg:right-6 text-[#edf2f4] hover:text-[#0a0a23]  duration-700 cursor-pointer font-bold text-[.76rem] py-1 mx-6 `}
               onClick={logout}
             >
-              Log Out
+              LOG OUT
             </li>
           ) : null}
         </ul>
@@ -62,6 +62,14 @@ const Navbar = () => {
                   <NavLink to={`${nav.path}`}>{nav.title}</NavLink>
                 </li>
               ))}
+              {user ? (
+            <li
+              className={`font-montserrat  text-[#838383]  duration-700 cursor-pointer font-bold text-[1.5rem] py-4 mx-6 mb-14 `}
+              onClick={logout}
+            >
+              LOG OUT
+            </li>
+          ) : null}
             </ul>
           </div>
         </div>
