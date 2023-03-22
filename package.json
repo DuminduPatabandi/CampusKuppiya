@@ -4,9 +4,12 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "react-scripts start",
+    "dev": "concurrently \"json-server -p 4000 -w ./data/db.json\" \"vite\"",
+    "test": "react-scripts test"
   },
   "dependencies": {
     "firebase": "^9.17.1",
