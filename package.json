@@ -4,7 +4,6 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    
     "build": "vite build",
     "preview": "vite preview",
     "start": "react-scripts start",
@@ -12,6 +11,8 @@
     "test": "react-scripts test"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.13",
+    "@heroicons/react": "^2.0.16",
     "firebase": "^9.17.1",
     "framer-motion": "^9.1.7",
     "react": "^18.2.0",

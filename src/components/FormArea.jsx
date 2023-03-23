@@ -7,9 +7,9 @@ const FormArea = () => {
     <section id='home' className={` ${styles.paddingY} my-0 sm:my-4 `}>
     <div className='flex flex-col  justify-center items-center '>
       <img src={kuppilogo} alt="site-logo" className='w-[6rem] h-[6rem] object-contain mt-4  sm:mt-10 ' />
-      <p className=' font-eb w-1/2 md:mt-16 md:mb-44 text-[#ffffff] text-[2.8rem] text-center pt-14'>
-      Contact Us
-      </p>
+      <p className=' font-poppins md:mt-16 font-bold w-1/2  text-[#ffffff] text-[2.8rem] text-center pt-14'>
+      Let's talk! </p>
+      <p className=' md:mb-44 text-[#cacaca] text-[0.8rem]'>Feel free to contact us.</p>
     </div>
    
 

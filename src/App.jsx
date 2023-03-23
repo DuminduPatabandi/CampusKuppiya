@@ -26,7 +26,7 @@ import {
 
 
 
-import { Home, About, Kuppiya, Video, Contact, Login, Register } from "./pages";
+import { Home, About, Kuppiya, Video, Contact, Login, Register, Profile } from "./pages";
 
 import {
   createBrowserRouter,
@@ -81,6 +81,7 @@ const router = createBrowserRouter(
       <Route path="pmat" element={<PMAT />} />
       <Route path="music" element={<Music />} />
       <Route path="more" element={<More />} />
+      <Route path="profile" element={<Profile />} />
 
 
     </Route>

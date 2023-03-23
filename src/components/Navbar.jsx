@@ -7,6 +7,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../firebase";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { Dropdown } from ".";
 
 const Navbar = () => {
   const [toggle, settoggle] = useState(false);
@@ -36,6 +37,7 @@ const Navbar = () => {
               LOG OUT
             </li>
           ) : null}
+          < Dropdown/>
         </ul>
         <div className="sm:hidden flex flex-1 justify-end items-center px-4 ">
           <img

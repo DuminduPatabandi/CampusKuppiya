@@ -6,6 +6,7 @@ import Video from "./Video";
 import Contact from "./Contact";
 import Login from "./login/Login";
 import Register from "./register/Register";
+import Profile from "./Profile";
 import auth from "../firebase";
 
 
@@ -17,5 +18,6 @@ export {
     Contact,
     Login,
     Register,
-    auth
+    auth,
+    Profile
 };

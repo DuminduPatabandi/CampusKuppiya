@@ -98,6 +98,11 @@ export const navLinks = [
     title: "CONTACT",
     path: "contact"
   },
+  {
+    id: "profile",
+    title: "PRO",
+    path: "profile"
+  },
 ];
 export const footerNavLinks = [
   {

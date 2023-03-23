@@ -16,6 +16,9 @@ import SemNav4 from "./SemNav4";
 import Semester1 from "./Semester1";
 import Semester2 from "./Semester2";
 import Development from "./Development";
+import ProfileArea from "./ProfileArea";
+import Dropdown from "./dropdown/Dropdown";
+
 
 
 export {
@@ -37,4 +40,6 @@ export {
     SemNav4,
     Footer,
     Work,
+    ProfileArea,
+    Dropdown,
 };
