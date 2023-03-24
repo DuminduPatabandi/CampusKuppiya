@@ -98,11 +98,6 @@ export const navLinks = [
     title: "CONTACT",
     path: "contact"
   },
-  {
-    id: "profile",
-    title: "PRO",
-    path: "profile"
-  },
 ];
 export const footerNavLinks = [
   {
@@ -113,22 +108,22 @@ export const footerNavLinks = [
   {
     id: "about",
     title: "ABOUT",
-    path: "/about"
+    path: "about"
   },
   {
     id: "kuppiya",
     title: "KUPPIYA",
-    path: "/kuppiya"
+    path: "kuppiya"
   },
   {
     id: "videos",
     title: "VIDEOS",
-    path: "/videos"
+    path: "videos"
   },
   {
     id: "contact",
     title: "CONTACT",
-    path: "/contact"
+    path: "contact"
   },
 ];
 

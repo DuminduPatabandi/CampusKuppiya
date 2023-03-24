@@ -20,6 +20,7 @@ import facebook from "./facebook.svg";
 import instagram from "./instagram.svg";
 import twitter from "./twitter.svg";
 import fb from "./fb.svg";
+import me from "./me.jpg";
 import linkedin from "./linkedin.svg";
 import people01 from "./people01.png";
 import people02 from "./people02.png";
@@ -35,6 +36,7 @@ export {
   airbnb,
   kuppi,
   fb,
+  me,
   github,
   drunkenwizard_dark,
   kuppilogo,

@@ -31,13 +31,13 @@ const Navbar = () => {
           ))}
           {user ? (
             <li
-              className={`font-montserrat lg:fixed lg:right-6 text-[#edf2f4] hover:text-[#0a0a23]  duration-700 cursor-pointer font-bold text-[.76rem] py-1 mx-6 `}
+              className={`font-montserrat  text-[#edf2f4] hover:text-[#0a0a23]  duration-700 cursor-pointer font-bold text-[.76rem] py-1 mx-6 `}
               onClick={logout}
             >
               LOG OUT
             </li>
           ) : null}
-          < Dropdown/>
+          <div className="fixed right-6">< Dropdown/></div>
         </ul>
         <div className="sm:hidden flex flex-1 justify-end items-center px-4 ">
           <img
