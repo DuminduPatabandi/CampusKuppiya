@@ -21,7 +21,7 @@ export default function Example() {
     <Popover className="relative">
       <Popover.Button className="inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
         <span>
-        <img class="object-cover w-8 h-8 rounded-full ring ring-gray-300 dark:ring-white" src={me} alt=""/>
+        <img class="object-cover w-8 h-8 mt-[6px] rounded-full ring ring-gray-300 dark:ring-white" src={me} alt=""/>
         </span>
       </Popover.Button>
 
