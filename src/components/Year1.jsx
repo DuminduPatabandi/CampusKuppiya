@@ -1,10 +1,10 @@
-import { SemNav1 } from "../components"
+import { SemNav } from "../components"
 
 
 const Year1 = () => {
   return (
     <div className="text-center">
-      <SemNav1/>
+      <SemNav/>
     </div>
   )
 }

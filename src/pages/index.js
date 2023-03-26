@@ -7,6 +7,7 @@ import Contact from "./Contact";
 import Login from "./login/Login";
 import Register from "./register/Register";
 import Profile from "./Profile";
+import UpdateProfile from "./UpdateProfile";
 import auth from "../firebase";
 
 
@@ -18,6 +19,7 @@ export {
     Contact,
     Login,
     Register,
+    UpdateProfile,
     auth,
     Profile
 };

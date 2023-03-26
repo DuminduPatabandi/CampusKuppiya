@@ -18,8 +18,8 @@ const Navbar = () => {
   }, [user]);
 
   return (
-    <div className="root-layout">
-      <nav className="w-full  bg-[#002ead] py-[0.8rem] navbar fixed">
+    <div className="root-layout ">
+      <nav className="w-full  bg-[#002ead] py-[0.8rem] navbar fixed z-40">
         <ul className="list-none sm:flex hidden justify-center items-center">
           {navLinks.map((nav, index) => (
             <li

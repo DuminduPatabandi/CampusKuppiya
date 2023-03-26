@@ -3,7 +3,7 @@ import { Y1Semesters} from '../constants'
 
 
 
-const Navbar = () => {
+const SemNav = () => {
 
   return (
 
@@ -35,4 +35,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default SemNav

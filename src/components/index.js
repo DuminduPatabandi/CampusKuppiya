@@ -9,15 +9,13 @@ import YearNav from "./YearNav";
 import Footer from "./Footer";
 import Work from "./Work";
 import FormArea from "./FormArea";
-import SemNav1 from "./SemNav1";
-import SemNav2 from "./SemNav2";
-import SemNav3 from "./SemNav3";
-import SemNav4 from "./SemNav4";
+import SemNav from "./SemNav";
 import Semester1 from "./Semester1";
 import Semester2 from "./Semester2";
 import Development from "./Development";
 import ProfileArea from "./ProfileArea";
 import Dropdown from "./dropdown/Dropdown";
+import ProfileSetting from "./profileSettings/ProfileSetting"
 
 
 
@@ -29,15 +27,13 @@ export {
     AboutArea,
     FormArea,
     Development,
+    ProfileSetting,
     Year1,
     Year2,
     Year3,
     Year4,
     YearNav,
-    SemNav1,
-    SemNav2,
-    SemNav3,
-    SemNav4,
+    SemNav,
     Footer,
     Work,
     ProfileArea,

@@ -1,7 +1,8 @@
 import React from 'react'
 import { useLoaderData, NavLink } from 'react-router-dom'
+// import { YearLinks } from '../constants'
 
-const Semester1 = () => {
+const Semester1 = (props) => {
 
   const subjects = useLoaderData()
 
@@ -9,7 +10,7 @@ const Semester1 = () => {
     <section id='work'>
       <div className="bg-white">
         <div className="mx-auto max-w-2xl py-8 px-4 sm:py-16 sm:px-6 lg:max-w-7xl lg:px-8 ">
-          <h3 className='font-montserrat font-bold text-[1.2rem] text-[#002ead]  pb-[5rem]'>Year 1 : Semester 1</h3>
+          <h3 className='font-montserrat font-bold text-[1.2rem] text-[#002ead]  pb-[5rem]'> YEAR ? : Semester 1</h3>
       <div className="grid grid-cols-1 text-center gap-y-10  gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
       {subjects.map((product) => (
               <NavLink to ="/" key={product.id} className="group text-[#ffffff]  hover:text-[#0a0a23]  bg-[#0a0a23] hover:bg-[#002ead] duration-700 py-6 px-4  mx-4  rounded-lg">

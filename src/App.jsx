@@ -1,4 +1,3 @@
-import styles from "./style";
 import { motion, useScroll } from "framer-motion";
 
 import {
@@ -26,7 +25,7 @@ import {
 
 
 
-import { Home, About, Kuppiya, Video, Contact, Login, Register, Profile } from "./pages";
+import { Home, About, Kuppiya, Video, Contact, Login, Register, Profile, UpdateProfile } from "./pages";
 
 import {
   createBrowserRouter,
@@ -82,6 +81,7 @@ const router = createBrowserRouter(
       <Route path="music" element={<Music />} />
       <Route path="more" element={<More />} />
       <Route path="profile" element={<Profile />} />
+      <Route path="update_profile" element={<UpdateProfile />} />
 
 
     </Route>

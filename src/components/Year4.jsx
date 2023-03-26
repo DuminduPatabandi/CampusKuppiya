@@ -1,9 +1,9 @@
-import { SemNav4 } from "../components"
+import { SemNav } from "../components"
 
 const Year4 = () => {
   return (
     <div className="text-center">
-      <SemNav4/>
+      <SemNav/>
     </div>
   )
 }
