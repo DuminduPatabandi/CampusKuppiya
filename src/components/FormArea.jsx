@@ -15,7 +15,7 @@ const FormArea = () => {
 
 {/* Form */}
 
-<div class="flex items-center justify-center p-12">
+<div className="flex items-center justify-center p-12">
 
   <div className="mx-auto w-full max-w-[550px]">
     <form action="https://formbold.com/s/FORM_ID" method="POST">
@@ -37,10 +37,10 @@ const FormArea = () => {
         ))}
       </div>
 
-      <div class="mb-5">
+      <div className="mb-5">
         <label
           for="message"
-          class="mb-3 block text-base font-montserrat  text-[#ffffff]"
+          className="mb-3 block text-base font-montserrat  text-[#ffffff]"
         >
           Message
         </label>
@@ -49,11 +49,11 @@ const FormArea = () => {
           name="message"
           id="message"
           placeholder="Type what you need to say to us!"
-          class="w-full outline outlinr-[#e0e0e0] bg-[#e0e0e0] font-eb py-3 px-6 text-base font-medium text-[#6B7280] outline-offset-0 outline-none focus:outline-[#819be1] focus:shadow-md mb-8 focus:outline-4"></textarea>
+          className="w-full outline outlinr-[#e0e0e0] bg-[#e0e0e0] font-eb py-3 px-6 text-base font-medium text-[#6B7280] outline-offset-0 outline-none focus:outline-[#819be1] focus:shadow-md mb-8 focus:outline-4"></textarea>
       </div> 
       <div className='text-center'>
         <button
-          class="hover:shadow-form bg-[#002ead] hover:bg-[#0a0a23] hover:px-16 hover:text-[#002ead] duration-700 py-3 px-10 mt-8 font-montserrat font-bold text-white outline-none"
+          className="hover:shadow-form bg-[#002ead] hover:bg-[#0a0a23] hover:px-16 hover:text-[#002ead] duration-700 py-3 px-10 mt-8 font-montserrat font-bold text-white outline-none"
         >
           SEND
         </button>

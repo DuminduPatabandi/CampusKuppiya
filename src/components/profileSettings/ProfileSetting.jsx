@@ -1,6 +1,27 @@
+import { useEffect, useState } from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { Link, useNavigate } from "react-router-dom";
+import { auth ,   registerWithEmailAndPassword } from "../../firebase";
+
 import { PhotoIcon, UserCircleIcon } from '@heroicons/react/24/solid'
 
 export default function ProfileSetting() {
+
+  // const [email, setEmail] = useState("");
+  const [about, setAbout] = useState("");
+  const [username, setUserName] = useState("");
+  const [user, loading, error] = useAuthState(auth);
+  const navigate = useNavigate();
+
+  const register = () => {
+    if (!username) alert("Please enter your User name");
+    registerWithEmailAndPassword(username, about);
+  };
+  useEffect(() => {
+    if (loading) return;
+    if (user) navigate("/");
+  }, [user, loading]);
+
   return (
     <form>
       <div className="space-y-12">
@@ -19,6 +40,8 @@ export default function ProfileSetting() {
                   <input
                     type="text"
                     name="username"
+                    value={username}
+                    onChange={(e) => setUserName(e.target.value)}
                     id="username"
                     autoComplete="username"
                     className="block flex-1 border-0  pl-3 bg-transparent py-1.5 text-gray-400 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
@@ -36,6 +59,8 @@ export default function ProfileSetting() {
                 <textarea
                   id="about"
                   name="about"
+                  value={about}
+                  onChange={(e) => setAbout(e.target.value)}
                   rows={3}
                   className="block w-full rounded-md border-0 text-[#23221f] shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#c6d7eb] sm:py-1.5 sm:text-sm sm:leading-6"
                   defaultValue={''}
@@ -67,7 +92,7 @@ export default function ProfileSetting() {
           <p className="mt-1 text-sm leading-6 text-gray-600">Use a permanent address where you can receive mail.</p>
 
           <div className="mt-10 grid grid-cols-1 gap-y-8 gap-x-6 sm:grid-cols-6">
-            <div className="sm:col-span-3">
+            {/* <div className="sm:col-span-3">
               <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-[#23221f]">
                 First name
               </label>
@@ -80,9 +105,9 @@ export default function ProfileSetting() {
                   className="block w-full rounded-md border-0 py-1.5 text-[#23221f] shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-[#c6d7eb] sm:text-sm sm:leading-6"
                 />
               </div>
-            </div>
+            </div> */}
 
-            <div className="sm:col-span-3">
+            {/* <div className="sm:col-span-3">
               <label htmlFor="last-name" className="block text-sm font-medium leading-6 text-[#23221f]">
                 Last name
               </label>
@@ -95,9 +120,9 @@ export default function ProfileSetting() {
                   className="block w-full rounded-md border-0 py-1.5 text-[#23221f] shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#c6d7eb] sm:text-sm sm:leading-6"
                 />
               </div>
-            </div>
+            </div> */}
 
-            <div className="sm:col-span-4">
+            {/* <div className="sm:col-span-4">
               <label htmlFor="email" className="block text-sm font-medium leading-6 text-[#23221f]">
                 Email address
               </label>
@@ -110,9 +135,9 @@ export default function ProfileSetting() {
                   className="block w-full rounded-md border-0 py-1.5 text-[#23221f] shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#c6d7eb] sm:text-sm sm:leading-6"
                 />
               </div>
-            </div>
+            </div> */}
 
-            <div className="sm:col-span-3">
+            {/* <div className="sm:col-span-3">
               <label htmlFor="country" className="block text-sm font-medium leading-6 text-[#23221f]">
                 University
               </label>
@@ -131,7 +156,7 @@ export default function ProfileSetting() {
 
                 </select>
               </div>
-            </div>
+            </div> */}
 
             <div className="col-span-full">
               <label htmlFor="street-address" className="block text-sm font-medium leading-6 text-[#23221f]">

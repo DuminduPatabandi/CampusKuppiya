@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link, useNavigate } from "react-router-dom";
 import { kuppilogo } from "../../assets";
@@ -9,6 +9,7 @@ import {
 } from "../../firebase";
 import "./Register.css";
 const Register = () => {
+  
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
@@ -23,6 +24,7 @@ const Register = () => {
     if (loading) return;
     if (user) navigate("/");
   }, [user, loading]);
+
   return (
     <section className="">
       <div className="container flex items-center justify-center min-h-screen px-6 mx-auto">

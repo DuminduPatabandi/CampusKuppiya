@@ -29,8 +29,9 @@ const Navbar = () => {
               <NavLink to={`${nav.path}`}>{nav.title}</NavLink>
             </li>
           ))}
-          
+          {user ? (
           <div className="fixed right-6">< Dropdown/></div>
+          ) : null}
         </ul>
 
         {/* For Mobile devices */}

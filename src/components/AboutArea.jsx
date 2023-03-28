@@ -13,7 +13,7 @@ const LogoArea = () => {
         them.
       </p>
       <p className=' font-eb w-3/4  text-[#939393] text-[1.6rem] text-center pt-14'>
-      We are <a class="text-[#6385e4] font-medium after:content-['_↗'] ..." href="https://drunked.netlify.app" target="_blank">Drunken Wizards</a> , a software company who are eager to develop and design
+      We are <a className="text-[#6385e4] font-medium after:content-['_↗'] ..." href="https://drunked.netlify.app" target="_blank">Drunken Wizards</a> , a software company who are eager to develop and design
       any custom made applications for you. Visit our official site for more information.
       </p>
     </div>
