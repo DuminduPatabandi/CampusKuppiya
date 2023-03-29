@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { useAuthState } from "react-firebase-hooks/auth";
+// import db from './firebase';
 import { Link, useNavigate } from "react-router-dom";
-import { auth ,   registerWithEmailAndPassword } from "../../firebase";
+
 
 import { PhotoIcon, UserCircleIcon } from '@heroicons/react/24/solid'
 
@@ -10,17 +10,9 @@ export default function ProfileSetting() {
   // const [email, setEmail] = useState("");
   const [about, setAbout] = useState("");
   const [username, setUserName] = useState("");
-  const [user, loading, error] = useAuthState(auth);
   const navigate = useNavigate();
 
-  const register = () => {
-    if (!username) alert("Please enter your User name");
-    registerWithEmailAndPassword(username, about);
-  };
-  useEffect(() => {
-    if (loading) return;
-    if (user) navigate("/");
-  }, [user, loading]);
+
 
   return (
     <form>
@@ -329,6 +321,7 @@ export default function ProfileSetting() {
         </button>
         <button
           type="submit"
+          // onClick={}
           className="rounded-md bg-indigo-600 py-2 px-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
         >
           Save

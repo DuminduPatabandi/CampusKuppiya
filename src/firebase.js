@@ -1,4 +1,5 @@
 import { initializeApp } from "firebase/app";
+// import firebase from 'firebase'
 import { getAnalytics,logEvent } from "firebase/analytics";
 import {
   GoogleAuthProvider,
@@ -32,6 +33,7 @@ const analytics = getAnalytics(app);
 logEvent(analytics, 'notification_received-log');
 export const auth = getAuth(app);
 export const db = getFirestore(app);
+// var db = firebase.firestore();
 const googleProvider = new GoogleAuthProvider();
 
 export const signInWithGoogle = async () => {
@@ -102,4 +104,5 @@ export default {
   registerWithEmailAndPassword,
   sendPasswordReset,
   logout,
+  // db,
 };
