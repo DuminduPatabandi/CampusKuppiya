@@ -34,7 +34,7 @@ export default function Example() {
         leaveFrom="opacity-100 translate-y-0"
         leaveTo="opacity-0 translate-y-1"
       >
-        <Popover.Panel className="absolute left-1/2 z-10 mt-5 flex w-screen max-w-max -translate-x-[24rem] px-4">
+        <Popover.Panel className="absolute left-1/2 z-10 mt-5 flex w-screen max-w-max -translate-x-[15.5rem] min-[375px]:-translate-x-[18.8rem] min-[425px]:-translate-x-[21.6rem] sm:-translate-x-[24rem] px-4">
           <div className="w-screen max-w-sm flex-auto overflow-hidden rounded-[.6rem] bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
             <div className="p-4">
 

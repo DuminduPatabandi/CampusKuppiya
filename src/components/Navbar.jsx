@@ -37,6 +37,11 @@ const Navbar = () => {
         {/* For Mobile devices */}
         
         <div className="sm:hidden flex flex-1 justify-end items-center px-4 ">
+
+        {user ? (
+          <div className="fixed right-14">< Dropdown/></div>
+          ) : null}
+
           <img
             src={toggle ? closing : mymenu}
             alt="menu-icon"
@@ -61,14 +66,7 @@ const Navbar = () => {
                   <NavLink to={`${nav.path}`}>{nav.title}</NavLink>
                 </li>
               ))}
-              {user ? (
-            <li
-              className={`font-montserrat  text-[#838383]  duration-700 cursor-pointer font-bold text-[1.5rem] py-4 mx-6 mb-14 `}
-              onClick={logout}
-            >
-              LOG OUT
-            </li>
-          ) : null}
+
             </ul>
           </div>
         </div>

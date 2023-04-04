@@ -72,6 +72,59 @@ export const Y4Semesters = [
   },
 ];
 
+export const skills = [
+  {
+    title: "React JS"
+  },
+  {
+    title: "Firebase"
+  },
+  {
+    title: "3D Modeling"
+  },
+  {
+    title: "Mongo DB"
+  },
+  {
+    title: "Illustrator"
+  },
+  {
+    title: "Machine Learning"
+  },
+  {
+    title: "C Programming"
+  },
+  {
+    title: "JavaFx"
+  },
+];
+
+export const education = [
+  {
+    title: "B.Sc.(Hons) in computer science",
+    institution: "University of Kelaniya, Sri Lanka",
+  },
+  {
+    title: "Advanced Level in Physical Science",
+    institution: "Maliyadeva College",
+  },
+];
+
+export const certificates = [
+  {
+    title: "Front-End web Development",
+    institution: "University of Moratuwa, Sri Lanka",
+  },
+  {
+    title: "Conceptia 2021 International Compitition",
+    institution: "University of Sri Jayawardenapura",
+  },
+  {
+    title: "Getting started with ReactJS",
+    institution: "Simplilearn",
+  },
+];
+
 export const navLinks = [
   {
     id: "home",
