@@ -32,7 +32,7 @@ const FormArea = () => {
           name={product.name}
           id={product.id}
           placeholder={product.placeholder}
-          className="w-full outline outlinr-[#e0e0e0] bg-[#e0e0e0] font-eb py-3 px-6 text-base font-medium text-[#6B7280] outline-offset-0 outline-none focus:outline-[#819be1] focus:shadow-md mb-8 focus:outline-4"/>
+          className="w-full outline outline-[#e0e0e0] bg-[#e0e0e0] font-eb py-3 px-6 text-base font-medium text-[#6B7280] outline-offset-0 outline-none focus:outline-[#819be1] focus:shadow-md mb-8 focus:outline-4"/>
           </div>
         ))}
       </div>

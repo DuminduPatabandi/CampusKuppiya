@@ -1,19 +1,31 @@
-import { me } from '../assets'
+import { me } from '../../assets'
 import { BuildingLibraryIcon, PhotoIcon, UserCircleIcon, UserIcon } from '@heroicons/react/24/solid'
-import { certificates, education, skills, profileLinks } from '../constants'
+import { certificates, education, skills, profileLinks } from '../../constants'
 import { NavLink } from 'react-router-dom'
 
-export default function Example() {
+export default function UserSetting() {
   return (
     <div className="">
       <div className="mx-auto max-w-max sm:px-5">
-        <div className="mx-auto  py-24  lg:max-w-none ">
+        <div className="mx-auto  py-12  lg:max-w-none ">
 
-          <div className=" pt-4  sm:flex sm:gap-x-20  ">
+          <div className=" pt-4 sm:gap-x-20  ">
+          <h1 className='text-center pb-6 font-montserrat text-white text-[1.25rem] pt-6 font-semibold'>Profile Settings</h1>
             <div className="infotab  bg-white sm:w-[36rem] lg:w-[25rem] sm:px-4 border border-[#dfdfe1] ">
               <div className="grid place-items-center">
-                <img className="object-cover mt-8 w-36 h-36  rounded-full" src={me} alt="Profile picture"/>
-                <h1 className='text-center font-montserrat  text-[1.25rem] pt-6 font-semibold'>Dumindu Patabandi</h1>
+
+                
+                <UserCircleIcon className="object-cover text-gray-300 mt-8 w-36 h-36  rounded-full" src={me} alt="Profile picture"/>
+                <input
+                    type="text"
+                    name="username"
+                    value=""
+                    onChange={(e) => setUserName(e.target.value)}
+                    id="username"
+                    // autoComplete="username"
+                    className="block bg-slate-100  flex-1 border-0  pl-3  py-1.5 text-gray-400 placeholder:text-gray-400 outline-offset-0 outline-none focus:outline-[#819be1] sm:text-sm sm:leading-6"
+                    placeholder="Your public user name"
+                  />
                 <p className='text-center font-montserrat  text-[.85rem]  text-[#939393] pt-1 '>drunkenwizards@gmail.com</p>
                 <p className='text-center font-montserrat font-medium text-[.80rem]  text-[#2ec4b6] pt-4 '>Online</p>
                 <hr className='my-7 w-11/12'/>
@@ -33,22 +45,6 @@ export default function Example() {
                 <p className='font-medium font-montserrat  text-[.85rem]  text-[#939393] pt-1 pb-6 col-span-2  text-right'>Dec 2022</p>
               </div>
 
-            </div>
-
-            {/* Course contents */}
-            <div className="infotab bg-white sm:w-[37rem] lg:w-[48rem] h-20 border hidden sm:block py-8 border-[#dfdfe1]">
-              <>
-              <ul className="list-none flex">
-                {profileLinks.map((nav) => (
-                  <li
-                    className={`font-montserrat  text-[#62646A] hover:text-[#48c0f8]  duration-700 cursor-pointer font-semibold text-[0.89rem] mx-6 `}
-                  >
-                    <NavLink to={`${nav.path}`}>{nav.title}</NavLink>
-                  </li>
-                ))}
-          
-              </ul>
-              </>
             </div>
 
           </div>
@@ -100,11 +96,7 @@ export default function Example() {
              
 
             </div>
-            <div className="infotab sm:w-[37rem] lg:w-[48rem]">
-              <>
-                ppp
-              </>
-            </div>
+
           </div>
 
         </div>

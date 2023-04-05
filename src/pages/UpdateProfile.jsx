@@ -1,12 +1,12 @@
-import { ProfileSetting } from '../components'
+import { UserSetting } from '../components'
 import styles from '../style'
 
 const UpdateProfile = () => {
   return (
     <div className="home ">
-      <div className= {` ${styles.paddingX} ${styles.flexStart} bg-[#ffffff] py-[12.1rem] sm:px-32 md:px-72 w-full`}>
+      <div className= {`${styles.flexStart} bg-[#0a0a23] sm:px-8 px-6 py-[1rem]  w-full`}>
         <div className={`${styles.boxWidth}`}>
-            <ProfileSetting/>
+            <UserSetting/>
         </div>
       </div>
     </div>

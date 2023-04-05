@@ -18,7 +18,7 @@ export default function ProfileSetting() {
     <form>
       <div className="space-y-12">
         <div className="border-b border-gray-900/10 pb-12">
-          <h2 className=" font-montserrat border-b border-gray-900/10 pb-6 font-semibold text-[1.4rem] leading-7  text-[#23221f]">Settings</h2>
+          <h2 className=" font-montserrat border-b border-gray-900/10 pb-6 font-semibold text-[1.4rem] leading-7  text-[#23221f]">Profile Settings</h2>
 
 
           <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
@@ -27,8 +27,7 @@ export default function ProfileSetting() {
                 Username
               </label>
               <div className="mt-2">
-                <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus:ring-[#c6d7eb] sm:max-w-md">
-                  <span className="flex select-none items-center pl-3 pr-2  text-gray-500 sm:text-sm">Campuskuppiya.com/</span>
+                <div className="flex shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus:ring-[#c6d7eb] sm:max-w-md">
                   <input
                     type="text"
                     name="username"
@@ -45,7 +44,7 @@ export default function ProfileSetting() {
 
             <div className="col-span-full">
               <label htmlFor="about" className="block text-sm font-medium leading-6 text-[#23221f]">
-                About
+                Bio
               </label>
               <div className="mt-2">
                 <textarea
@@ -84,7 +83,7 @@ export default function ProfileSetting() {
           <p className="mt-1 text-sm leading-6 text-gray-600">Use a permanent address where you can receive mail.</p>
 
           <div className="mt-10 grid grid-cols-1 gap-y-8 gap-x-6 sm:grid-cols-6">
-            {/* <div className="sm:col-span-3">
+            <div className="sm:col-span-3">
               <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-[#23221f]">
                 First name
               </label>
@@ -97,9 +96,9 @@ export default function ProfileSetting() {
                   className="block w-full rounded-md border-0 py-1.5 text-[#23221f] shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-[#c6d7eb] sm:text-sm sm:leading-6"
                 />
               </div>
-            </div> */}
+            </div>
 
-            {/* <div className="sm:col-span-3">
+            <div className="sm:col-span-3">
               <label htmlFor="last-name" className="block text-sm font-medium leading-6 text-[#23221f]">
                 Last name
               </label>
@@ -112,9 +111,9 @@ export default function ProfileSetting() {
                   className="block w-full rounded-md border-0 py-1.5 text-[#23221f] shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#c6d7eb] sm:text-sm sm:leading-6"
                 />
               </div>
-            </div> */}
+            </div>
 
-            {/* <div className="sm:col-span-4">
+            <div className="sm:col-span-4">
               <label htmlFor="email" className="block text-sm font-medium leading-6 text-[#23221f]">
                 Email address
               </label>
@@ -127,9 +126,9 @@ export default function ProfileSetting() {
                   className="block w-full rounded-md border-0 py-1.5 text-[#23221f] shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#c6d7eb] sm:text-sm sm:leading-6"
                 />
               </div>
-            </div> */}
+            </div>
 
-            {/* <div className="sm:col-span-3">
+            <div className="sm:col-span-3">
               <label htmlFor="country" className="block text-sm font-medium leading-6 text-[#23221f]">
                 University
               </label>
@@ -148,7 +147,7 @@ export default function ProfileSetting() {
 
                 </select>
               </div>
-            </div> */}
+            </div>
 
             <div className="col-span-full">
               <label htmlFor="street-address" className="block text-sm font-medium leading-6 text-[#23221f]">

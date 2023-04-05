@@ -99,6 +99,17 @@ export const skills = [
   },
 ];
 
+export const profileLinks = [
+  {
+    title: "RECENT COURCES",
+    path: "recent_courses"
+  },
+  {
+    title: "YOUR UPLOADS",
+    path: "uploaded_courses"
+  },
+];
+
 export const education = [
   {
     title: "B.Sc.(Hons) in computer science",

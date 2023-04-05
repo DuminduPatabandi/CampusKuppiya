@@ -15,7 +15,8 @@ import Semester2 from "./Semester2";
 import Development from "./Development";
 import ProfileArea from "./ProfileArea";
 import Dropdown from "./dropdown/Dropdown";
-import ProfileSetting from "./profileSettings/ProfileSetting"
+import ProfileSetting from "./profileSettings/ProfileSetting";
+import UserSetting from "./profileSettings/UserSetting"
 
 
 
@@ -28,6 +29,7 @@ export {
     FormArea,
     Development,
     ProfileSetting,
+    UserSetting,
     Year1,
     Year2,
     Year3,
