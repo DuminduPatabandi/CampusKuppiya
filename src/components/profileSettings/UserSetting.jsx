@@ -78,7 +78,12 @@ export default function UserSetting() {
               {/* Description Section */}
               <div className="px-4">
                 <h1 className=' font-montserrat  text-[1rem] pt-8 font-semibold'>Description</h1>
-                <p className='font-montserrat  text-[.85rem]  text-[#62646A] pt-5 '>I love designing. I create websites, logos, 3d – models, and magazines, giving my clients the utmost delight. To accomplish this, I focus on delivering key outcomes, using the newest technology, and quickly adapting to new learnings. Designing websites and doing 3d models is my favorite thing from all of the above. I love to do them.</p>
+                <textarea
+                  rows="6"
+                  name="message"
+                  id="message"
+                  placeholder="Tell us who you are, what are you passionate about."
+                  className="w-full  font-montserrat p-5 mt-6 bg-slate-100 text-[.85rem]  outline-offset-0 outline-none focus:outline-[#819be1] text-[#939393]  focus:outline-4"></textarea>
                 <hr className='my-7 w-11/12'/>
               </div>
 
