@@ -23,7 +23,7 @@ export default function Example() {
                   <BuildingLibraryIcon className="h-5 w-5 text-[#62646a]" aria-hidden="true" />
                   <p className='font-medium font-montserrat  ml-3 text-[.85rem] text-[#939393] pt-1 '>From</p>
                 </div>
-                <p className='font-medium font-montserrat  text-[.85rem]  text-[#939393] pt-1 col-span-2  text-right'>UOK</p>
+                <p className='font-medium font-montserrat  text-[.85rem]  text-[#939393] pt-1 col-span-2  text-right'>Anuradhapura</p>
               </div>
               <div className="grid grid-cols-6 gap-4 py-3 px-4">
                 <div className="col-span-4 flex">

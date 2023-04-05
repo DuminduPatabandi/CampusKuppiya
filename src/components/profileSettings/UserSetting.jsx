@@ -1,6 +1,6 @@
 import { me } from '../../assets'
 import { BuildingLibraryIcon, PhotoIcon, UserCircleIcon, UserIcon } from '@heroicons/react/24/solid'
-import { certificates, education, skills, profileLinks } from '../../constants'
+import { certificates, education, skills, profileLinks, cities } from '../../constants'
 import { NavLink } from 'react-router-dom'
 
 export default function UserSetting() {
@@ -12,31 +12,53 @@ export default function UserSetting() {
           <div className=" pt-4 sm:gap-x-20  ">
           <h1 className='text-center pb-6 font-montserrat text-white text-[1.25rem] pt-6 font-semibold'>Profile Settings</h1>
             <div className="infotab  bg-white sm:w-[36rem] lg:w-[25rem] sm:px-4 border border-[#dfdfe1] ">
-              <div className="grid place-items-center">
 
-                
+              <div className="grid place-items-center">
+ 
                 <UserCircleIcon className="object-cover text-gray-300 mt-8 w-36 h-36  rounded-full" src={me} alt="Profile picture"/>
                 <input
                     type="text"
                     name="username"
-                    value=""
+                    // value=""
                     onChange={(e) => setUserName(e.target.value)}
                     id="username"
-                    // autoComplete="username"
-                    className="block bg-slate-100  flex-1 border-0  pl-3  py-1.5 text-gray-400 placeholder:text-gray-400 outline-offset-0 outline-none focus:outline-[#819be1] sm:text-sm sm:leading-6"
+                    autoComplete="username"
+                    className="block bg-slate-100  flex-1 border-0 text-center py-1.5 text-gray-400 placeholder:text-gray-400 outline-offset-0 outline-none focus:outline-[#819be1] sm:text-sm sm:leading-6"
                     placeholder="Your public user name"
                   />
-                <p className='text-center font-montserrat  text-[.85rem]  text-[#939393] pt-1 '>drunkenwizards@gmail.com</p>
-                <p className='text-center font-montserrat font-medium text-[.80rem]  text-[#2ec4b6] pt-4 '>Online</p>
+                <input
+                    type="email"
+                    name="email"
+                    // value=""
+                    onChange={(e) => setUserName(e.target.value)}
+                    id="public_email"
+                    autoComplete="email"
+                    className="block bg-slate-100  flex-1 border-0 text-center mt-3 py-1.5 text-gray-400 placeholder:text-gray-400 outline-offset-0 outline-none focus:outline-[#819be1] sm:text-sm sm:leading-6"
+                    placeholder="Your public email"
+                  />
+                
                 <hr className='my-7 w-11/12'/>
+
               </div>
+
               <div className="grid grid-cols-6 gap-4 px-4">
-                <div className="col-span-4 flex">
+                <div className="col-span-3 flex">
                   <BuildingLibraryIcon className="h-5 w-5 text-[#62646a]" aria-hidden="true" />
                   <p className='font-medium font-montserrat  ml-3 text-[.85rem] text-[#939393] pt-1 '>From</p>
                 </div>
-                <p className='font-medium font-montserrat  text-[.85rem]  text-[#939393] pt-1 col-span-2  text-right'>UOK</p>
+
+                <select
+                  id="district"
+                  name="district"
+                  autoComplete="district_name"
+                  className="block w-full font-medium font-montserrat text-[.85rem]  outline-offset-0 outline-none focus:outline-[#819be1] text-[#939393] py-2 px-4 col-span-3  border-0 "
+                >
+                  {cities.map((cities) => (
+                    <option>{cities.title}</option>
+                  ))}
+                </select>
               </div>
+
               <div className="grid grid-cols-6 gap-4 py-3 px-4">
                 <div className="col-span-4 flex">
                   <UserIcon className="h-5 w-5 text-[#62646a]" aria-hidden="true" />

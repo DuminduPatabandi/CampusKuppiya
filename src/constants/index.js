@@ -191,6 +191,83 @@ export const footerNavLinks = [
   },
 ];
 
+export const cities = [
+  {
+    title: "Anuradhapura"
+  },
+  {
+    title: "Badulla"
+  },
+  {
+    title: "Balangoda"
+  },
+  {
+    title: "Batticaloa"
+  },
+  {
+    title: "Chilaw"
+  },
+  {
+    title: "Colombo"
+  },
+  {
+    title: "Dambulla"
+  },
+  {
+    title: "Galle"
+  },
+  {
+    title: "Gampaha"
+  },
+  {
+    title: "Hambantota"
+  },
+  {
+    title: "Jaffna"
+  },
+  {
+    title: "Kalutara"
+  },
+  {
+    title: "Kandy"
+  },
+  {
+    title: "Kegalle"
+  },
+  {
+    title: "Kilinochchi"
+  },
+  {
+    title: "Kurunegala"
+  },
+  {
+    title: "Mannar"
+  },
+  {
+    title: "Matale"
+  },
+  {
+    title: "Matara"
+  },
+  {
+    title: "Negombo"
+  },
+  {
+    title: "Nuwara Eliya"
+  },
+  {
+    title: "Polonnaruwa"
+  },
+  {
+    title: "Ratnapura"
+  },
+  {
+    title: "Trincomalee"
+  },
+  {
+    title: "Vavuniya"
+  },
+];
 
 export const formElements = [
   {
