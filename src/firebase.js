@@ -104,5 +104,5 @@ export default {
   registerWithEmailAndPassword,
   sendPasswordReset,
   logout,
-  // db,
+  db,
 };

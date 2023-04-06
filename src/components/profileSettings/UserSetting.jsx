@@ -1,12 +1,79 @@
 import { me } from '../../assets'
-import { BuildingLibraryIcon, PhotoIcon, UserCircleIcon, UserIcon } from '@heroicons/react/24/solid'
+import { BuildingLibraryIcon, MinusCircleIcon, PlusCircleIcon, UserCircleIcon, UserIcon } from '@heroicons/react/24/solid'
 import { certificates, education, skills, profileLinks, cities } from '../../constants'
-import { NavLink } from 'react-router-dom'
+import { useState } from 'react'
+import { addDoc, collection, serverTimestamp, setDoc } from 'firebase/firestore'
+import { auth, db, registerWithEmailAndPassword } from '../../firebase'
+// import {createUserWithEmailAndPassword, registerWithEmailAndPassword } from 'firebase/auth'
+
+
 
 export default function UserSetting() {
+
+
+  // Adding fields
+  const [fields, setFields] = useState([{ value: '' }]);
+
+  const addField = () => {
+    setFields([...fields, { value: '' }]);
+  };
+
+  const removeField = (indexToRemove) => {
+    setFields(fields.filter((field, index) => index !== indexToRemove));
+  };
+
+  const handleInputChange = (index, event) => {
+    const newFields = [...fields];
+    newFields[index].value = event.target.value;
+    setFields(newFields);
+  };
+
+  const handleBothChanges = (event) => {
+    handleInput(event);
+    handleInputChange(index, event);
+  }
+
+  // End of adding fields............
+
+  const [file, setFile] = useState("");
+  const [data, setData] = useState({});
+
+  const handleInput = (e) => {
+    const id = e.target.id;
+    const value = e.target.value;
+
+    setData({...data, [id]: value});
+  }
+
+  console.log(data)
+
+  const handleAdd = async (e) => {
+    e.preventDefault();
+    try {
+
+      const res = await registerWithEmailAndPassword(
+        auth,
+        data.email,
+        data.password
+      )
+
+      await setDoc(doc(db,"users", res.user.uid), {
+        ...data,
+        class: "saman",
+        timeStamp: serverTimestamp()
+      });
+
+    } catch(err) {
+      console.log(err)
+    }
+  }
+
   return (
     <div className="">
       <div className="mx-auto max-w-max sm:px-5">
+
+
+
         <div className="mx-auto  py-12  lg:max-w-none ">
 
           <div className=" pt-4 sm:gap-x-20  ">
@@ -19,8 +86,7 @@ export default function UserSetting() {
                 <input
                     type="text"
                     name="username"
-                    // value=""
-                    onChange={(e) => setUserName(e.target.value)}
+                    onChange={handleInput}
                     id="username"
                     autoComplete="username"
                     className="block bg-slate-100  flex-1 border-0 text-center py-1.5 text-gray-400 placeholder:text-gray-400 outline-offset-0 outline-none focus:outline-[#819be1] sm:text-sm sm:leading-6"
@@ -29,8 +95,7 @@ export default function UserSetting() {
                 <input
                     type="email"
                     name="email"
-                    // value=""
-                    onChange={(e) => setUserName(e.target.value)}
+                    onChange={handleInput}
                     id="public_email"
                     autoComplete="email"
                     className="block bg-slate-100  flex-1 border-0 text-center mt-3 py-1.5 text-gray-400 placeholder:text-gray-400 outline-offset-0 outline-none focus:outline-[#819be1] sm:text-sm sm:leading-6"
@@ -50,6 +115,7 @@ export default function UserSetting() {
                 <select
                   id="district"
                   name="district"
+                  onChange={handleInput}
                   autoComplete="district_name"
                   className="block w-full font-medium font-montserrat text-[.85rem]  outline-offset-0 outline-none focus:outline-[#819be1] text-[#939393] py-2 px-4 col-span-3  border-0 "
                 >
@@ -71,6 +137,7 @@ export default function UserSetting() {
 
           </div>
 
+
           {/* Second part */}
           <div className=" pt-6 space-y-12 sm:flex sm:gap-x-20 sm:space-y-0 ">
             <div className="infotab  bg-white sm:w-[36rem] lg:w-[25rem] sm:px-4 border border-[#dfdfe1] ">
@@ -80,6 +147,7 @@ export default function UserSetting() {
                 <h1 className=' font-montserrat  text-[1rem] pt-8 font-semibold'>Description</h1>
                 <textarea
                   rows="6"
+                  onChange={handleInput}
                   name="message"
                   id="message"
                   placeholder="Tell us who you are, what are you passionate about."
@@ -90,24 +158,80 @@ export default function UserSetting() {
               {/* Education Section */}
               <div className="px-4">
                 <h1 className=' font-montserrat  text-[1rem] font-semibold'>Education</h1>
-                {education.map((education) => (
-                  <>
-                  <p className='font-montserrat  text-[.85rem]  text-[#555555] pt-5 '>{education.title}</p>
-                  <p className='font-montserrat  text-[.85rem]  text-[#B2B2B2] pt-1 '>{education.institution}</p>
-                  </>
-                ))}
+                
+                <div className="container mx-auto px-4 py-8">
+                  {fields.map((field, index) => (
+                    <div key={index} className="mb-4">
+                      <input
+                        type="text"
+                        className="w-full  font-montserrat p-3 mt-4 bg-slate-100 text-[.85rem]  outline-offset-0 outline-none focus:outline-[#819be1] text-[#939393]  focus:outline-4"
+                        placeholder="Degree or Field"
+                        onChange={handleBothChanges}
+                      />
+                      <input
+                        type="text"
+                        className="w-full  font-montserrat p-3 mt-4 bg-slate-100 text-[.85rem]  outline-offset-0 outline-none focus:outline-[#819be1] text-[#939393]  focus:outline-4"
+                        placeholder="University or Institution"
+                        onChange={handleBothChanges}
+                      />
+                    </div>
+                  ))}
+                  <button
+                    className=" text-white  px-3 py-2 "
+                    onClick={addField}
+                  >
+                    <PlusCircleIcon className="h-8 w-8 text-slate-300" />
+                    <span></span>
+                  </button>
+                  <button
+                    className=" text-white  px-3 py-2 "
+                    onClick={() => removeField(index)}
+                  >
+                    <MinusCircleIcon className="h-8 w-8 text-slate-300" />
+                    <span></span>
+                  </button>
+                </div>
+
                 <hr className='my-7 w-11/12'/>
               </div>
 
               {/* Certification Section */}
               <div className="px-4">
                 <h1 className=' font-montserrat  text-[1rem] font-semibold'>Certification</h1>
-                {certificates.map((certificates) => (
-                  <>
-                  <p className='font-montserrat  text-[.85rem]  text-[#555555] pt-5 '>{certificates.title}</p>
-                  <p className='font-montserrat  text-[.85rem]  text-[#B2B2B2] pt-1 '>{certificates.institution}</p>
-                  </>
-                ))}
+
+                <div className="container mx-auto px-4 py-8">
+                  {fields.map((field, index) => (
+                    <div key={index} className="mb-4">
+                      <input
+                        type="text"
+                        className="w-full  font-montserrat p-3 mt-4 bg-slate-100 text-[.85rem]  outline-offset-0 outline-none focus:outline-[#819be1] text-[#939393]  focus:outline-4"
+                        placeholder="Certificate name"
+                        onChange={handleBothChanges}
+                      />
+                      <input
+                        type="text"
+                        className="w-full  font-montserrat p-3 mt-4 bg-slate-100 text-[.85rem]  outline-offset-0 outline-none focus:outline-[#819be1] text-[#939393]  focus:outline-4"
+                        placeholder="University or Institution"
+                        onChange={handleBothChanges}
+                      />
+                    </div>
+                  ))}
+                  <button
+                    className=" text-white  px-3 py-2 "
+                    onClick={addField}
+                  >
+                    <PlusCircleIcon className="h-8 w-8 text-slate-300" />
+                    <span></span>
+                  </button>
+                  <button
+                    className=" text-white  px-3 py-2 "
+                    onClick={() => removeField(index)}
+                  >
+                    <MinusCircleIcon className="h-8 w-8 text-slate-300" />
+                    <span></span>
+                  </button>
+                </div>    
+
                 <hr className='my-7 w-11/12'/>
               </div>
 
@@ -122,11 +246,23 @@ export default function UserSetting() {
               </div>
              
 
+
             </div>
 
           </div>
+          <form onSubmit={handleAdd}>
+
+             <button 
+                className="w-full px-6 mt-6 py-3 text-sm font-medium tracking-wide text-[#0a0a23] capitalize transition-colors duration-300 transform bg-slate-100  hover:bg-[#002ead] "
+                type='submit'                
+                >
+                    Save Changes
+                </button>
+                </form>
 
         </div>
+
+        
       </div>
     </div>
   )
