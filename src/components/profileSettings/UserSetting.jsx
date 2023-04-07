@@ -1,12 +1,10 @@
 import { me } from '../../assets'
 import { BuildingLibraryIcon, MinusCircleIcon, PlusCircleIcon, UserCircleIcon, UserIcon } from '@heroicons/react/24/solid'
 import { certificates, education, skills, profileLinks, cities } from '../../constants'
-import { useState } from 'react'
-import { addDoc, collection, serverTimestamp, setDoc } from 'firebase/firestore'
-import { auth, db, registerWithEmailAndPassword } from '../../firebase'
-// import {createUserWithEmailAndPassword, registerWithEmailAndPassword } from 'firebase/auth'
-
-
+import { useEffect, useState } from 'react'
+import { Firestore, addDoc, collection, serverTimestamp, setDoc ,query,where,getDocs, getDoc, doc, limit} from 'firebase/firestore'
+import { auth, db } from '../../firebase'
+import {createUserWithEmailAndPassword } from 'firebase/auth'
 
 export default function UserSetting() {
 
@@ -22,46 +20,78 @@ export default function UserSetting() {
     setFields(fields.filter((field, index) => index !== indexToRemove));
   };
 
-  const handleInputChange = (index, event) => {
-    const newFields = [...fields];
-    newFields[index].value = event.target.value;
-    setFields(newFields);
-  };
+  // const handleInputChange = (index, event) => {
+  //   const newFields = [...fields];
+  //   newFields[index].value = event.target.value;
+  //   setFields(newFields);
+  // };
 
-  const handleBothChanges = (event) => {
-    handleInput(event);
-    handleInputChange(index, event);
-  }
+  // const handleBothChanges = (event) => {
+  //   handleInput(event);
+  //   handleInputChange(index, event);
+  // }
 
   // End of adding fields............
 
   const [file, setFile] = useState("");
   const [data, setData] = useState({});
 
-  const handleInput = (e) => {
+  const [user, setUser] = useState({
+
+    email: "",
+  });
+
+  useEffect(() => {
+
+    auth.onAuthStateChanged(user => {
+      if (user) {
+        console.log(user.uid);
+        async function fetchUser() {
+          const q = query(collection(db, 'users'), where('uid', '==', user.uid), limit(1));
+          const querySnapshot = await getDocs(q);
+          if (!querySnapshot.empty) {
+            setUser(querySnapshot.docs[0].data());
+            console.log(user)
+          } else {
+          console.log('No matching documents!');
+      }
+    }
+    fetchUser();
+      } else {
+        // setUser(null);
+        
+      }
+    });
+
+  }, []);
+  console.log(user);
+
+  const handleProfileInput = (e) => {
+    e.persist();
     const id = e.target.id;
     const value = e.target.value;
 
-    setData({...data, [id]: value});
+    setUser({...data, [id]: value});
   }
 
-  console.log(data)
 
   const handleAdd = async (e) => {
     e.preventDefault();
     try {
 
-      const res = await registerWithEmailAndPassword(
-        auth,
-        data.email,
-        data.password
-      )
+      // const res = await createUserWithEmailAndPassword(
+      //   auth,
+      //   data.email,
+      //   data.password
+      // )
 
-      await setDoc(doc(db,"users", res.user.uid), {
-        ...data,
-        class: "saman",
-        timeStamp: serverTimestamp()
-      });
+      // console.log(data)
+
+      // await setDoc(doc(db,"users", res.user.uid), {
+      //   ...data,
+      //   class: "saman",
+      //   timeStamp: serverTimestamp()
+      // });
 
     } catch(err) {
       console.log(err)
@@ -72,7 +102,7 @@ export default function UserSetting() {
     <div className="">
       <div className="mx-auto max-w-max sm:px-5">
 
-
+      <form onSubmit={handleAdd}>
 
         <div className="mx-auto  py-12  lg:max-w-none ">
 
@@ -86,7 +116,8 @@ export default function UserSetting() {
                 <input
                     type="text"
                     name="username"
-                    onChange={handleInput}
+                    value={user.username}
+                    onChange={handleProfileInput}
                     id="username"
                     autoComplete="username"
                     className="block bg-slate-100  flex-1 border-0 text-center py-1.5 text-gray-400 placeholder:text-gray-400 outline-offset-0 outline-none focus:outline-[#819be1] sm:text-sm sm:leading-6"
@@ -95,7 +126,9 @@ export default function UserSetting() {
                 <input
                     type="email"
                     name="email"
-                    onChange={handleInput}
+                    // readOnly={true}
+                    onChange={handleProfileInput}
+                    value={user.email}
                     id="public_email"
                     autoComplete="email"
                     className="block bg-slate-100  flex-1 border-0 text-center mt-3 py-1.5 text-gray-400 placeholder:text-gray-400 outline-offset-0 outline-none focus:outline-[#819be1] sm:text-sm sm:leading-6"
@@ -115,10 +148,11 @@ export default function UserSetting() {
                 <select
                   id="district"
                   name="district"
-                  onChange={handleInput}
+                  onChange={handleProfileInput}
                   autoComplete="district_name"
                   className="block w-full font-medium font-montserrat text-[.85rem]  outline-offset-0 outline-none focus:outline-[#819be1] text-[#939393] py-2 px-4 col-span-3  border-0 "
                 >
+                  <option>{user.district}</option>
                   {cities.map((cities) => (
                     <option>{cities.title}</option>
                   ))}
@@ -147,7 +181,9 @@ export default function UserSetting() {
                 <h1 className=' font-montserrat  text-[1rem] pt-8 font-semibold'>Description</h1>
                 <textarea
                   rows="6"
-                  onChange={handleInput}
+                  readOnly={true}
+                  value={user.description}
+                  onChange={handleProfileInput}
                   name="message"
                   id="message"
                   placeholder="Tell us who you are, what are you passionate about."
@@ -156,7 +192,7 @@ export default function UserSetting() {
               </div>
 
               {/* Education Section */}
-              <div className="px-4">
+              {/* <div className="px-4">
                 <h1 className=' font-montserrat  text-[1rem] font-semibold'>Education</h1>
                 
                 <div className="container mx-auto px-4 py-8">
@@ -193,7 +229,7 @@ export default function UserSetting() {
                 </div>
 
                 <hr className='my-7 w-11/12'/>
-              </div>
+              </div> */}
 
               {/* Certification Section */}
               <div className="px-4">
@@ -206,13 +242,13 @@ export default function UserSetting() {
                         type="text"
                         className="w-full  font-montserrat p-3 mt-4 bg-slate-100 text-[.85rem]  outline-offset-0 outline-none focus:outline-[#819be1] text-[#939393]  focus:outline-4"
                         placeholder="Certificate name"
-                        onChange={handleBothChanges}
+                        // onChange={handleBothChanges}
                       />
                       <input
                         type="text"
                         className="w-full  font-montserrat p-3 mt-4 bg-slate-100 text-[.85rem]  outline-offset-0 outline-none focus:outline-[#819be1] text-[#939393]  focus:outline-4"
                         placeholder="University or Institution"
-                        onChange={handleBothChanges}
+                        // onChange={handleBothChanges}
                       />
                     </div>
                   ))}
@@ -250,7 +286,7 @@ export default function UserSetting() {
             </div>
 
           </div>
-          <form onSubmit={handleAdd}>
+          
 
              <button 
                 className="w-full px-6 mt-6 py-3 text-sm font-medium tracking-wide text-[#0a0a23] capitalize transition-colors duration-300 transform bg-slate-100  hover:bg-[#002ead] "
@@ -258,11 +294,12 @@ export default function UserSetting() {
                 >
                     Save Changes
                 </button>
-                </form>
+               
 
         </div>
 
         
+    </form>
       </div>
     </div>
   )

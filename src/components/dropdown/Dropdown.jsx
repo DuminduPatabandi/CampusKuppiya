@@ -1,14 +1,11 @@
-import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { logout } from "../../firebase";
 import { NavLink } from 'react-router-dom'
 import { me } from '../../assets'
-import {
-  BeakerIcon,
-  CogIcon,
-  PowerIcon,
-  UserIcon,
-} from '@heroicons/react/24/outline'
+import {BeakerIcon, CogIcon, PowerIcon, UserIcon, } from '@heroicons/react/24/outline'
+import { Fragment, useEffect, useState } from 'react'
+import { Firestore, addDoc, collection, serverTimestamp, setDoc ,query,where,getDocs, getDoc, doc, limit} from 'firebase/firestore'
+import { auth, db } from '../../firebase'
 
 const solutions = [
   { name: 'Profile', description: 'See how your profile is', path: 'profile', icon: UserIcon },
@@ -16,7 +13,41 @@ const solutions = [
   { name: 'Update to Master', description: "Ask for an Admin account", path: '#', icon: BeakerIcon },
 ]
 
+
+
 export default function Example() {
+
+
+  const [user, setUser] = useState({
+
+    email: "",
+  });
+  
+  useEffect(() => {
+  
+    auth.onAuthStateChanged(user => {
+      if (user) {
+        console.log(user.uid);
+        async function fetchUser() {
+          const q = query(collection(db, 'users'), where('uid', '==', user.uid), limit(1));
+          const querySnapshot = await getDocs(q);
+          if (!querySnapshot.empty) {
+            setUser(querySnapshot.docs[0].data());
+            console.log(user)
+          } else {
+          console.log('No matching documents!');
+      }
+    }
+    fetchUser();
+      } else {
+        // setUser(null);
+        
+      }
+    });
+  
+  }, []);
+
+
   return (
     <Popover className="relative">
       <Popover.Button className="inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
@@ -43,9 +74,9 @@ export default function Example() {
                   <img className="object-cover w-12 h-12 mt-[6px] rounded-full" src={me} alt="Profile picture"/>
                   </div>
                   <div>
-                    <p className='font-semibold text-gray-900 text-[1.3rem] font-montserrat'>DUMINDU PATABANDI</p>
-                    <p className="mt-[.1rem] text-gray-600">drunkenwizards@gmail.com</p>
-                    <p className="mt-[.1rem] text-gray-600">University of Kelaniya</p>
+                    <p className='font-semibold text-gray-900 text-[1.3rem] font-montserrat uppercase'>{user.name}</p>
+                    <p className="mt-[.1rem] text-gray-600">{user.email}</p>
+                    <p className="mt-[.1rem] text-gray-600">{user.university}</p>
                   </div>
               </div>
 
