@@ -2,6 +2,7 @@ import { me } from '../assets'
 import { BuildingLibraryIcon, PhotoIcon, UserCircleIcon, UserIcon } from '@heroicons/react/24/solid'
 import { certificates, education, skills, profileLinks } from '../constants'
 import { NavLink } from 'react-router-dom'
+import { PencilSquareIcon } from '@heroicons/react/24/outline'
 
 export default function Example() {
   return (
@@ -10,9 +11,12 @@ export default function Example() {
         <div className="mx-auto  py-24  lg:max-w-none ">
 
           <div className=" pt-4  sm:flex sm:gap-x-20  ">
-            <div className="infotab  bg-white sm:w-[36rem] lg:w-[25rem] sm:px-4 border border-[#dfdfe1] ">
+            <div className="infotab  bg-white sm:w-[38rem] lg:w-[25rem] sm:px-4 border border-[#dfdfe1] ">
+                <div className="edit text-center grid place-content-end">
+                  <PencilSquareIcon className="h-6 w-6 mt-4 mr-4 sm:mr-1 text-slate-200 hover:text-[#002ead] duration-700" aria-hidden="true" />
+                </div>
               <div className="grid place-items-center">
-                <img className="object-cover mt-8 w-36 h-36  rounded-full" src={me} alt="Profile picture"/>
+                <img className="object-cover w-36 h-36  rounded-full" src={me} alt="Profile picture"/>
                 <h1 className='text-center font-montserrat  text-[1.25rem] pt-6 font-semibold'>Dumindu Patabandi</h1>
                 <p className='text-center font-montserrat  text-[.85rem]  text-[#939393] pt-1 '>drunkenwizards@gmail.com</p>
                 <p className='text-center font-montserrat font-medium text-[.80rem]  text-[#2ec4b6] pt-4 '>Online</p>
@@ -54,18 +58,27 @@ export default function Example() {
           </div>
 
           {/* Second part */}
-          <div className=" pt-6 space-y-12 sm:flex sm:gap-x-20 sm:space-y-0 ">
+          <div className=" pt-6  sm:flex sm:gap-x-20  ">
             <div className="infotab  bg-white sm:w-[36rem] lg:w-[25rem] sm:px-4 border border-[#dfdfe1] ">
+
+              <div className="edit text-center grid place-content-end">
+                  <PencilSquareIcon className="h-6 w-6 mt-4 mr-4 sm:mr-1 text-slate-200 hover:text-[#002ead] duration-700" aria-hidden="true" />
+              </div>
 
               {/* Description Section */}
               <div className="px-4">
-                <h1 className=' font-montserrat  text-[1rem] pt-8 font-semibold'>Description</h1>
+                <h1 className=' font-montserrat  text-[1rem]  font-semibold'>Description</h1>
                 <p className='font-montserrat  text-[.85rem]  text-[#62646A] pt-5 '>I love designing. I create websites, logos, 3d – models, and magazines, giving my clients the utmost delight. To accomplish this, I focus on delivering key outcomes, using the newest technology, and quickly adapting to new learnings. Designing websites and doing 3d models is my favorite thing from all of the above. I love to do them.</p>
-                <hr className='my-7 w-11/12'/>
+                <hr className='mt-7 w-11/12'/>
               </div>
 
               {/* Education Section */}
               <div className="px-4">
+
+                <div className="edit text-center grid place-content-end">
+                    <PencilSquareIcon className="h-6 w-6 mt-4  sm:-mr-3 text-slate-200 hover:text-[#002ead] duration-700" aria-hidden="true" />
+                </div>
+
                 <h1 className=' font-montserrat  text-[1rem] font-semibold'>Education</h1>
                 {education.map((education) => (
                   <>
@@ -73,11 +86,16 @@ export default function Example() {
                   <p className='font-montserrat  text-[.85rem]  text-[#B2B2B2] pt-1 '>{education.institution}</p>
                   </>
                 ))}
-                <hr className='my-7 w-11/12'/>
+                <hr className='mt-7 w-11/12'/>
               </div>
 
               {/* Certification Section */}
               <div className="px-4">
+
+                <div className="edit text-center grid place-content-end">
+                    <PencilSquareIcon className="h-6 w-6 mt-4  sm:-mr-3 text-slate-200 hover:text-[#002ead] duration-700" aria-hidden="true" />
+                </div>
+
                 <h1 className=' font-montserrat  text-[1rem] font-semibold'>Certification</h1>
                 {certificates.map((certificates) => (
                   <>
@@ -85,11 +103,16 @@ export default function Example() {
                   <p className='font-montserrat  text-[.85rem]  text-[#B2B2B2] pt-1 '>{certificates.institution}</p>
                   </>
                 ))}
-                <hr className='my-7 w-11/12'/>
+                <hr className='mt-7 w-11/12'/>
               </div>
 
               {/* Skills Section */}
               <div className="px-4">
+
+                <div className="edit text-center grid place-content-end">
+                    <PencilSquareIcon className="h-6 w-6 mt-4  sm:-mr-3 text-slate-200 hover:text-[#002ead] duration-700" aria-hidden="true" />
+                </div>
+
                 <h1 className=' font-montserrat text-[1rem] font-semibold'>Skills</h1>
                 <div className=" mb-7">
                   {skills.map((skills) => (
