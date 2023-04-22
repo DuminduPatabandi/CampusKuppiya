@@ -20,7 +20,7 @@ export default function Example() {
 
   const [user, setUser] = useState({
 
-    email: "",
+    // email: "",
   });
   
   useEffect(() => {

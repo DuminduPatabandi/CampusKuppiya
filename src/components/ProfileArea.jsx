@@ -3,8 +3,43 @@ import { BuildingLibraryIcon, PhotoIcon, UserCircleIcon, UserIcon } from '@heroi
 import { certificates, education, skills, profileLinks } from '../constants'
 import { NavLink } from 'react-router-dom'
 import { PencilSquareIcon } from '@heroicons/react/24/outline'
+import { useState, useEffect } from 'react'
+import { Firestore, addDoc, collection, serverTimestamp, setDoc ,query,where,getDocs, getDoc, doc, limit} from 'firebase/firestore'
+import { auth, db } from '../firebase'
+
 
 export default function Example() {
+
+
+  const [user, setUser] = useState({
+
+  })
+
+  useEffect(() => {
+  
+    auth.onAuthStateChanged(user => {
+      if (user) {
+        console.log(user.uid);
+        async function fetchUser() {
+          const q = query(collection(db, 'users'), where('uid', '==', user.uid), limit(1));
+          const querySnapshot = await getDocs(q);
+          if (!querySnapshot.empty) {
+            setUser(querySnapshot.docs[0].data());
+            console.log(user)
+          } else {
+          console.log('No matching documents!');
+      }
+    }
+    fetchUser();
+      } else {
+        // setUser(null);
+        
+      }
+    });
+  
+  }, []);
+
+
   return (
     <div className="">
       <div className="mx-auto max-w-max sm:px-5">
@@ -17,8 +52,8 @@ export default function Example() {
                 </div>
               <div className="grid place-items-center">
                 <img className="object-cover w-36 h-36  rounded-full" src={me} alt="Profile picture"/>
-                <h1 className='text-center font-montserrat  text-[1.25rem] pt-6 font-semibold'>Dumindu Patabandi</h1>
-                <p className='text-center font-montserrat  text-[.85rem]  text-[#939393] pt-1 '>drunkenwizards@gmail.com</p>
+                <h1 className='text-center font-montserrat  text-[1.25rem] pt-6 font-semibold'>{user.name}</h1>
+                <p className='text-center font-montserrat  text-[.85rem]  text-[#939393] pt-1 '>{user.email}</p>
                 <p className='text-center font-montserrat font-medium text-[.80rem]  text-[#2ec4b6] pt-4 '>Online</p>
                 <hr className='my-7 w-11/12'/>
               </div>
@@ -27,14 +62,14 @@ export default function Example() {
                   <BuildingLibraryIcon className="h-5 w-5 text-[#62646a]" aria-hidden="true" />
                   <p className='font-medium font-montserrat  ml-3 text-[.85rem] text-[#939393] pt-1 '>From</p>
                 </div>
-                <p className='font-medium font-montserrat  text-[.85rem]  text-[#939393] pt-1 col-span-2  text-right'>Anuradhapura</p>
+                <p className='font-medium font-montserrat  text-[.85rem]  text-[#939393] pt-1 col-span-2  text-right'>{user.district}</p>
               </div>
               <div className="grid grid-cols-6 gap-4 py-3 px-4">
                 <div className="col-span-4 flex">
                   <UserIcon className="h-5 w-5 text-[#62646a]" aria-hidden="true" />
                   <p className='font-medium font-montserrat  ml-3 text-[.85rem] text-[#939393] pt-1 '>Member since</p>
                 </div>
-                <p className='font-medium font-montserrat  text-[.85rem]  text-[#939393] pt-1 pb-6 col-span-2  text-right'>Dec 2022</p>
+                <p className='font-medium font-montserrat  text-[.85rem]  text-[#939393] pt-1 pb-6 col-span-2  text-right'>DEC 2022</p>
               </div>
 
             </div>
@@ -68,7 +103,7 @@ export default function Example() {
               {/* Description Section */}
               <div className="px-4">
                 <h1 className=' font-montserrat  text-[1rem]  font-semibold'>Description</h1>
-                <p className='font-montserrat  text-[.85rem]  text-[#62646A] pt-5 '>I love designing. I create websites, logos, 3d – models, and magazines, giving my clients the utmost delight. To accomplish this, I focus on delivering key outcomes, using the newest technology, and quickly adapting to new learnings. Designing websites and doing 3d models is my favorite thing from all of the above. I love to do them.</p>
+                <p className='font-montserrat  text-[.85rem]  text-[#62646A] pt-5 '>{user.description}</p>
                 <hr className='mt-7 w-11/12'/>
               </div>
 
