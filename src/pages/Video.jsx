@@ -1,20 +1,22 @@
-import { useAuthState } from "react-firebase-hooks/auth"
-import { auth } from "../firebase"
-import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
+import { Need } from "../components";
 
 
 const Video = () => {
 
-  const [user, error] = useAuthState(auth);
-  const navigate = useNavigate();
-  useEffect(() => {
-    if (!user) navigate("/login");
-  }, [user]);
-
+  const currentUser = JSON.parse(localStorage.getItem("currentUser"))
   return (
-    <div>Video</div>
-  )
-}
 
-export default Video
+    <div className="user">
+      {currentUser ? (
+      <div>Video</div>
+      ) : (
+        <>
+        <Need/>
+        </>
+      )}
+    </div>
+  );
+};
+
+export default Video;
+

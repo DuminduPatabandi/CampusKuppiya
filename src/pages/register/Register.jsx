@@ -1,34 +1,55 @@
 import { useEffect, useState } from "react";
-import { useAuthState } from "react-firebase-hooks/auth";
+
 import { Link, useNavigate } from "react-router-dom";
+import newRequest from "../../utils/newRequest";
+import upload from "../../utils/upload.js";
 import { kuppilogo } from "../../assets";
-import {
-  auth,
-  registerWithEmailAndPassword,
-  signInWithGoogle,
-} from "../../firebase";
+import {BuildingLibraryIcon, EnvelopeIcon, LockClosedIcon, UserCircleIcon, UserIcon, } from '@heroicons/react/24/outline'
 import "./Register.css";
+
+
 const Register = () => {
-  
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [name, setName] = useState("");
-  const [user, loading, error] = useAuthState(auth);
+
+  const [file, setFile] = useState(null);
+  const [user, setUser] = useState({
+    username: "",
+    email: "",
+    password: "",
+    img: "",
+    university: "",
+    isTeacher: false,
+    phone: "",
+    desc: "",
+  });
+
   const navigate = useNavigate();
 
-  const register = () => {
-    if (!name) alert("Please enter name");
-    registerWithEmailAndPassword(name, email, password);
+  const handleChange = (e) => {
+    e.persist();
+      setUser((prev) => {
+        return { ...prev, [e.target.name]: e.target.value };
+      });
   };
-  useEffect(() => {
-    if (loading) return;
-    if (user) navigate("/");
-  }, [user, loading]);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const url = await upload(file);
+    try {
+      await newRequest.post("/auth/register", {
+        ...user,
+        img: url,
+      });
+      navigate("/")
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   return (
     <section className="">
       <div className="container flex items-center justify-center min-h-screen px-6 mx-auto">
-        <form className="w-full max-w-md">
+        <form onSubmit={handleSubmit} className="w-full max-w-md">
           <div className="flex flex-col  justify-center items-center ">
             <img
               src={kuppilogo}
@@ -43,97 +64,83 @@ const Register = () => {
 
           <div class="relative flex items-center mt-8">
             <span className="absolute">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-6 h-6 mx-3 text-gray-300"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                />
-              </svg>
+            <UserIcon className="w-6 h-6 mx-3 text-gray-300" aria-hidden="true" />
             </span>
 
             <input
               type="text"
+              name="username"
               className="block w-full py-3 text-gray-700 bg-white border rounded-lg px-11  focus:border-blue-400  focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              placeholder="Full Name"
+              onChange={handleChange}
+              placeholder="Username"
             />
           </div>
 
           <div class="relative flex items-center mt-4">
             <span className="absolute">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-6 h-6 mx-3 text-gray-300"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                />
-              </svg>
+            <EnvelopeIcon className="w-6 h-6 mx-3 text-gray-300" aria-hidden="true" />
+            </span>
+
+            <input
+              name="email"
+              type="email"
+              className="block w-full py-3 text-gray-700 bg-white border rounded-lg px-11  focus:border-blue-400  focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
+              onChange={handleChange}
+              placeholder="Email address"
+            />
+          </div>
+
+          <div class="relative flex items-center mt-4">
+            <span className="absolute">
+            <BuildingLibraryIcon className="w-6 h-6 mx-3 text-gray-300" aria-hidden="true" />
             </span>
 
             <input
               type="text"
+              name="university"
               className="block w-full py-3 text-gray-700 bg-white border rounded-lg px-11  focus:border-blue-400  focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Email address"
+              onChange={handleChange}
+              placeholder="University"
             />
           </div>
 
           <div className="relative flex items-center mt-4">
             <span className="absolute">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-6 h-6 mx-3 text-gray-300 "
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
-                />
-              </svg>
+            <LockClosedIcon className="w-6 h-6 mx-3 text-gray-300" aria-hidden="true" />
             </span>
 
             <input
               type="password"
+              name="password"
               className="block w-full px-10 py-3 text-gray-700 bg-white border rounded-lg  focus:border-blue-400 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              onChange={handleChange}
               placeholder="Password"
+            />
+          </div>
+          <div className="relative flex items-center mt-4">
+            <span className="absolute">
+            <UserCircleIcon className="w-6 h-6 mx-3 text-gray-300" aria-hidden="true" />
+            </span>
+
+            <input
+              type="file"
+              name="img"
+              className="block w-full px-10 py-3 text-gray-700"
+              onChange={(e) => setFile(e.target.files[0])}
+              placeholder="image"
             />
           </div>
 
           <div className="mt-6">
             <button
               className="w-full px-6 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-lg hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50"
-              onClick={(e) => {
-                e.preventDefault();
-                register();
-              }}
+              type="submit"
             >
               Sign Up
             </button>
+       
 
-            <p className="mt-4 text-center text-gray-600 dark:text-gray-400">
+            {/* <p className="mt-4 text-center text-gray-600 dark:text-gray-400">
               or sign in with
             </p>
 
@@ -162,7 +169,7 @@ const Register = () => {
               </svg>
 
               <span className="mx-2">Sign in with Google</span>
-            </a>
+            </a> */}
 
             <div className="mt-6 text-center ">
               Already have an account?
@@ -174,6 +181,7 @@ const Register = () => {
               </Link>
               now
             </div>
+
           </div>
         </form>
       </div>

@@ -1,43 +1,16 @@
-import { me } from '../assets'
-import { BuildingLibraryIcon, PhotoIcon, UserCircleIcon, UserIcon } from '@heroicons/react/24/solid'
-import { certificates, education, skills, profileLinks } from '../constants'
-import { NavLink } from 'react-router-dom'
+import { BuildingLibraryIcon, UserIcon } from '@heroicons/react/24/solid'
+import { NavLink, Outlet, useNavigate } from 'react-router-dom'
 import { PencilSquareIcon } from '@heroicons/react/24/outline'
-import { useState, useEffect } from 'react'
-import { Firestore, addDoc, collection, serverTimestamp, setDoc ,query,where,getDocs, getDoc, doc, limit} from 'firebase/firestore'
-import { auth, db } from '../firebase'
+import newRequest from "../utils/newRequest";
+import { MyDocuments, AddNew } from '.'
 
 
 export default function Example() {
 
 
-  const [user, setUser] = useState({
+  const navigate = useNavigate();
 
-  })
-
-  useEffect(() => {
-  
-    auth.onAuthStateChanged(user => {
-      if (user) {
-        console.log(user.uid);
-        async function fetchUser() {
-          const q = query(collection(db, 'users'), where('uid', '==', user.uid), limit(1));
-          const querySnapshot = await getDocs(q);
-          if (!querySnapshot.empty) {
-            setUser(querySnapshot.docs[0].data());
-            console.log(user)
-          } else {
-          console.log('No matching documents!');
-      }
-    }
-    fetchUser();
-      } else {
-        // setUser(null);
-        
-      }
-    });
-  
-  }, []);
+  const currentUser = JSON.parse(localStorage.getItem("currentUser"))
 
 
   return (
@@ -51,18 +24,18 @@ export default function Example() {
                   <PencilSquareIcon className="h-6 w-6 mt-4 mr-4 sm:mr-1 text-slate-200 hover:text-[#002ead] duration-700" aria-hidden="true" />
                 </div>
               <div className="grid place-items-center">
-                <img className="object-cover w-36 h-36  rounded-full" src={me} alt="Profile picture"/>
-                <h1 className='text-center font-montserrat  text-[1.25rem] pt-6 font-semibold'>{user.name}</h1>
-                <p className='text-center font-montserrat  text-[.85rem]  text-[#939393] pt-1 '>{user.email}</p>
+                <img className="object-cover w-36 h-36  rounded-full" src={currentUser.img || "noavatar.jpg"} alt="Profile picture"/>
+                <h1 className='text-center font-montserrat  text-[1.25rem] pt-6 font-semibold'>{currentUser?.username}</h1>
+                <p className='text-center font-montserrat  text-[.85rem]  text-[#939393] pt-1 '>{currentUser?.email}</p>
                 <p className='text-center font-montserrat font-medium text-[.80rem]  text-[#2ec4b6] pt-4 '>Online</p>
                 <hr className='my-7 w-11/12'/>
               </div>
               <div className="grid grid-cols-6 gap-4 px-4">
-                <div className="col-span-4 flex">
+                <div className="col-span-3 flex">
                   <BuildingLibraryIcon className="h-5 w-5 text-[#62646a]" aria-hidden="true" />
-                  <p className='font-medium font-montserrat  ml-3 text-[.85rem] text-[#939393] pt-1 '>From</p>
+                  <p className='font-medium font-montserrat  ml-3 text-[.85rem] text-[#939393] pt-1 '>University</p>
                 </div>
-                <p className='font-medium font-montserrat  text-[.85rem]  text-[#939393] pt-1 col-span-2  text-right'>{user.district}</p>
+                <p className='font-medium font-montserrat  text-[.85rem]  text-[#939393] pt-1 col-span-3  text-right'>{currentUser?.university}</p>
               </div>
               <div className="grid grid-cols-6 gap-4 py-3 px-4">
                 <div className="col-span-4 flex">
@@ -75,20 +48,34 @@ export default function Example() {
             </div>
 
             {/* Course contents */}
-            <div className="infotab bg-white sm:w-[37rem] lg:w-[48rem] h-20 border hidden sm:block py-8 border-[#dfdfe1]">
-              <>
-              <ul className="list-none flex">
-                {profileLinks.map((nav) => (
-                  <li
-                    className={`font-montserrat  text-[#62646A] hover:text-[#48c0f8]  duration-700 cursor-pointer font-semibold text-[0.89rem] mx-6 `}
-                  >
-                    <NavLink to={`${nav.path}`}>{nav.title}</NavLink>
-                  </li>
-                ))}
-          
-              </ul>
-              </>
+            {currentUser.isTeacher ? (
+            <div className="infotab  sm:w-[37rem] lg:w-[48rem] ">
+              
+              <div className="adminnav  border bg-white ">
+                <ul className="list-none flex justify-center">
+                    <span
+                      className={`font-montserrat py-5 px-6 hover:bg-[#002ead] text-[#838383] hover:text-white  font-bold duration-700 cursor-pointer text-[.85rem] `}
+                    >
+                      <NavLink to="mydocuments">My Uploads</NavLink>
+                    </span>
+                    <span
+                      className={`font-montserrat py-5 px-6 hover:bg-[#002ead] text-[#838383] hover:text-white  font-bold duration-700 cursor-pointer text-[.85rem]  `}
+                    >
+                      <NavLink to="addnew">Add new Courses</NavLink>
+                    </span>
+                </ul>
+              </div>
+
+              <main>
+                <Outlet />
+              </main>
+              
             </div>
+            ) : (
+              <div className="padawan">
+
+              </div>
+            )}
 
           </div>
 
@@ -103,7 +90,7 @@ export default function Example() {
               {/* Description Section */}
               <div className="px-4">
                 <h1 className=' font-montserrat  text-[1rem]  font-semibold'>Description</h1>
-                <p className='font-montserrat  text-[.85rem]  text-[#62646A] pt-5 '>{user.description}</p>
+                <p className='font-montserrat  text-[.85rem]  text-[#62646A] pt-5 '>{currentUser?.desc}</p>
                 <hr className='mt-7 w-11/12'/>
               </div>
 
@@ -115,12 +102,13 @@ export default function Example() {
                 </div>
 
                 <h1 className=' font-montserrat  text-[1rem] font-semibold'>Education</h1>
-                {education.map((education) => (
+                {currentUser?.education.map((education, index) => (
                   <>
-                  <p className='font-montserrat  text-[.85rem]  text-[#555555] pt-5 '>{education.title}</p>
-                  <p className='font-montserrat  text-[.85rem]  text-[#B2B2B2] pt-1 '>{education.institution}</p>
+                    <p className='font-montserrat text-[.85rem] text-[#555555] pt-5 '>{education}</p>
+                    <p className='font-montserrat text-[.85rem] text-[#B2B2B2] pt-1 '>{currentUser?.institution[index]}</p>
                   </>
                 ))}
+
                 <hr className='mt-7 w-11/12'/>
               </div>
 
@@ -132,10 +120,10 @@ export default function Example() {
                 </div>
 
                 <h1 className=' font-montserrat  text-[1rem] font-semibold'>Certification</h1>
-                {certificates.map((certificates) => (
+                {currentUser?.certification.map((certification, index) => (
                   <>
-                  <p className='font-montserrat  text-[.85rem]  text-[#555555] pt-5 '>{certificates.title}</p>
-                  <p className='font-montserrat  text-[.85rem]  text-[#B2B2B2] pt-1 '>{certificates.institution}</p>
+                    <p className='font-montserrat text-[.85rem] text-[#555555] pt-5 '>{certification}</p>
+                    <p className='font-montserrat text-[.85rem] text-[#B2B2B2] pt-1 '>{certification?.certification_uni[index]}</p>
                   </>
                 ))}
                 <hr className='mt-7 w-11/12'/>
@@ -150,19 +138,19 @@ export default function Example() {
 
                 <h1 className=' font-montserrat text-[1rem] font-semibold'>Skills</h1>
                 <div className=" mb-7">
-                  {skills.map((skills) => (
-                    <p className='font-montserrat border inline-block rounded-full py-2 px-3 mx-1 text-[.75rem]  text-[#555555] mt-5 '>{skills.title}</p>
+                  {currentUser?.skills.map((skills) => (
+                    <p className='font-montserrat border inline-block rounded-full py-2 px-3 mx-1 text-[.75rem]  text-[#555555] mt-5 '>{skills}</p>
                   ))}
                 </div>
               </div>
              
 
             </div>
-            <div className="infotab sm:w-[37rem] lg:w-[48rem]">
-              <>
-                ppp
-              </>
-            </div>
+            {currentUser.isTeacher ? (
+            <div className="infotab sm:w-[37rem] lg:w-[48rem]"></div>
+            ) : (
+              <div className="padawan"></div>
+            )}
           </div>
 
         </div>

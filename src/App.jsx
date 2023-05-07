@@ -9,23 +9,11 @@ import {
   Year4,
   Semester1,
   Semester2,
+  MyDocuments,
+  AddNew,
 } from "./components";
 
-import {
-  PHYS,
-  PMAT,
-  CHEM,
-  COSC,
-  COST,
-  STAT,
-  AMAT,
-  Music,
-  More,
-} from "./subjects";
-
-
-
-import { Home, About, Kuppiya, Video, Contact, Login, Register, Profile, UpdateProfile } from "./pages";
+import { Home, About, Kuppiya, Video, Contact, Login, Register, Profile, UpdateProfile, Docs } from "./pages";
 
 import {
   createBrowserRouter,
@@ -33,7 +21,16 @@ import {
   createRoutesFromElements,
   RouterProvider,
 } from "react-router-dom";
+
 import { subjectsLoader } from "./components/Semester1";
+
+import {
+  QueryClient,
+  QueryClientProvider,
+  useQuery,
+} from '@tanstack/react-query'
+
+
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -69,19 +66,13 @@ const router = createBrowserRouter(
       <Route path="videos" element={<Video />} />
       <Route path="contact" element={<Contact />} />
 
-      {/* Subject Routes */}
 
-      <Route path="cosc" element={<COSC />} />
-      <Route path="amat" element={<AMAT />} />
-      <Route path="chem" element={<CHEM />} />
-      <Route path="cost" element={<COST />} />
-      <Route path="phys" element={<PHYS />} />
-      <Route path="stat" element={<STAT />} />
-      <Route path="pmat" element={<PMAT />} />
-      <Route path="music" element={<Music />} />
-      <Route path="more" element={<More />} />
-      <Route path="profile" element={<Profile />} />
+      <Route path="profile" element={<Profile />} >
+      <Route path="mydocuments" element={<MyDocuments />} />
+      <Route path="addnew" element={<AddNew />} />
+      </Route>
       <Route path="update_profile" element={<UpdateProfile />} />
+      <Route path="docs" element={<Docs />} />
 
 
     </Route>
@@ -89,30 +80,22 @@ const router = createBrowserRouter(
 );
 
 const App = () => {
-  // var cursor = document.querySelector(".cursor");
-  // var cursor2 = document.querySelector(".cursor2");
-  // document.addEventListener("mousemove", function (e) {
-  //   cursor.style.cssText = cursor2.style.cssText =
-  //     "left:" + e.clientX + "px; top: " + e.clientY + "px;";
-  // });
 
+  const queryClient = new QueryClient();
   const { scrollYProgress } = useScroll();
 
   return (
-    // Navigation bar
 
     <div className=" overflow-hidden bg-[#002ead] w-full">
-      <RouterProvider router={router} />
+      <QueryClientProvider client={queryClient}>
+        <RouterProvider router={router} />
+        <motion.div
+          className="progress-bar"
+          style={{ scaleX: scrollYProgress }}
+        />
+        <Footer />
+      </QueryClientProvider>
 
-      <motion.div
-        className="progress-bar"
-        style={{ scaleX: scrollYProgress }}
-      />
-
-      {/* <div class="cursor"></div>
-        <div class="cursor2"></div> */}
-
-      <Footer />
     </div>
   );
 };

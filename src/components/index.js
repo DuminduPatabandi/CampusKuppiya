@@ -17,12 +17,22 @@ import ProfileArea from "./ProfileArea";
 import Dropdown from "./dropdown/Dropdown";
 import ProfileSetting from "./profileSettings/ProfileSetting";
 import UserSetting from "./profileSettings/UserSetting"
+import Need from "./Need"
+import Document from "./document/Document"
+import GigCard from "./gigCard/GigCard"
+import MyDocuments from "./dashboard/MyDoduments"
+import AddNew from "./dashboard/AddNew"
 
 
 
 export {
     Semester1,
     Semester2,
+    Need,
+    Document,
+    MyDocuments,
+    AddNew,
+    GigCard,
     Navbar,
     LogoArea,
     AboutArea,

@@ -31,9 +31,11 @@ import kuppi from "./kuppi.svg";
 import kuppilogo from "./kuppilogo.svg";
 import kuppilogodark from "./kuppilogodark.svg";
 import mainlogo from "./mainlogo.svg";
+import noavatar from "./noavatar.jpg";
 
 export {
   airbnb,
+  noavatar,
   kuppi,
   fb,
   me,

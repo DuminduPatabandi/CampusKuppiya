@@ -11,11 +11,7 @@ import { Dropdown } from ".";
 
 const Navbar = () => {
   const [toggle, settoggle] = useState(false);
-  const [user, error] = useAuthState(auth);
-  const navigate = useNavigate();
-  useEffect(() => {
-    if (!user) navigate("/login");
-  }, [user]);
+
 
   return (
     <div className="root-layout ">
@@ -29,18 +25,17 @@ const Navbar = () => {
               <NavLink to={`${nav.path}`}>{nav.title}</NavLink>
             </li>
           ))}
-          {user ? (
+          
           <div className="fixed right-6">< Dropdown/></div>
-          ) : null}
+
         </ul>
 
         {/* For Mobile devices */}
         
         <div className="sm:hidden flex flex-1 justify-end items-center px-4 ">
 
-        {user ? (
+        
           <div className="fixed right-14">< Dropdown/></div>
-          ) : null}
 
           <img
             src={toggle ? closing : mymenu}

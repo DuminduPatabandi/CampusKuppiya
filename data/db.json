@@ -2,39 +2,53 @@
     "subjects": [
         {
             "id":111,
-            "title":"Computer Science"
-        },
-        {
-            "id":112,
-            "title":"Pure Maths"
+            "title":"Computer Science",
+            "input":"Computer Science"
+            
         },
         {
             "id":113,
-            "title":"Applied Maths"
+            "title":"Applied Maths",
+            "input":"Applied Maths"
+            
+        },
+        {
+            "id":112,
+            "title":"Pure Maths",
+            "input":"Pure Maths"
+            
         },
         {
             "id":114,
-            "title":"Physics"
-        },
+            "title":"Physics",
+            "input":"Physics"
+                    },
         {
             "id":115,
-            "title":"Chemistry"
-        },
+            "title":"Chemistry",
+            "input":"Chemistry"
+                    },
         {
             "id":116,
-            "title":"Statistics"
-        },
+            "title":"Statistics",
+            "input":"Statistics"
+                    },
         {
             "id":117,
-            "title":"Computer Studies"
+            "title":"Computer Studies",
+            "input":"Computer Studies"
+            
         },
         {
             "id":118,
-            "title":"Study Music"
+            "title":"Relaxing Music",
+            "input":"Relaxing Music"
+            
         },
         {
             "id":119,
-            "title":"More +"
+            "title":"More +",
+            "input":"More +"
         }
     ]
 }

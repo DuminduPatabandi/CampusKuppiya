@@ -386,6 +386,59 @@ export const doings = [
 
 ];
 
+export const subjects = [
+
+  {
+    "id":3111,
+    "title":"Computer Science",
+    "input":"Computer Science"
+    
+},
+{
+    "id":3113,
+    "title":"Applied Maths",
+    "input":"Applied Maths"
+    
+},
+{
+    "id":3112,
+    "title":"Pure Maths",
+    "input":"Pure Maths"
+    
+},
+{
+    "id":3114,
+    "title":"Physics",
+    "input":"Physics"
+},
+{
+    "id":3115,
+    "title":"Chemistry",
+    "input":"Chemistry"
+},
+{
+    "id":3116,
+    "title":"Statistics",
+    "input":"Statistics"
+},
+{
+    "id":3117,
+    "title":"Computer Studies",
+    "input":"Computer Studies"
+    
+},
+{
+    "id":3118,
+    "title":"Relaxing Music",
+    "input":"Relaxing Music"
+    
+},
+{
+    "id":3119,
+    "title":"More +",
+    "input":"More +"
+}
+]
 
 export const footerLinks = [
 

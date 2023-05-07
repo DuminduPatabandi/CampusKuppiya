@@ -7,10 +7,8 @@ import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const [user, error] = useAuthState(auth);
-  const navigate = useNavigate();
-  useEffect(() => {
-    if (!user) navigate("/login");
-  }, [user]);
+
+  
   return (
     <div className="home ">
       <div

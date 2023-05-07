@@ -38,7 +38,10 @@ export default function UserSetting() {
 
   const [user, setUser] = useState({
 
+    username: "",
     email: "",
+    district: "",
+    message: "",
   });
 
   useEffect(() => {
